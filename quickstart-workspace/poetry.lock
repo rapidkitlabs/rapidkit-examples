@@ -2117,14 +2117,14 @@ all = ["numpy"]
 
 [[package]]
 name = "rapidkit-core"
-version = "0.3.8"
+version = "0.3.9"
 description = "Community-built rapid automation toolkit for makers who ship with heart"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "rapidkit_core-0.3.8-py3-none-any.whl", hash = "sha256:b21fadefebaccf4c9f0ceba4f9547fd3e2dd78b1de271e3036b2ba888f775997"},
-    {file = "rapidkit_core-0.3.8.tar.gz", hash = "sha256:b5800cf80c734be95b36b64fc3ff0a96533a5df1602d6c3bd0fa03111ac5ee92"},
+    {file = "rapidkit_core-0.3.9-py3-none-any.whl", hash = "sha256:dc7d3feb96a5b9e3650990355fa2e9c7be631ae0a0473ee3a139db5c231e50b0"},
+    {file = "rapidkit_core-0.3.9.tar.gz", hash = "sha256:469cfb6c36845cfee20faec9d0115e5df9126f6c73a704347c58ee80d5afa307"},
 ]
 
 [package.dependencies]

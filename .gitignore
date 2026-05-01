@@ -1,3 +1,4 @@
 # Ignore RapidKit generated cache/vendor snapshots across all example projects
 **/.rapidkit/snapshots/
 **/.rapidkit/vendor/
+**/.rapidkit/reports/

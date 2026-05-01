@@ -190,7 +190,7 @@ docker-compose up -d
 Validate the workspace setup:
 
 ```bash
-npx rapidkit doctor --workspace
+npx rapidkit doctor workspace
 ```
 
 **Checks:**

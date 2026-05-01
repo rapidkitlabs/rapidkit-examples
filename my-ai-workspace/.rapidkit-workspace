@@ -1,17 +1,18 @@
 {
   "signature": "RAPIDKIT_WORKSPACE",
   "createdBy": "rapidkit-npm",
-  "version": "0.19.0",
+  "version": "0.27.0",
   "createdAt": "2026-02-12T09:11:57.734Z",
   "name": "my-ai-workspace",
   "metadata": {
     "npm": {
-      "packageVersion": "0.19.0",
+      "packageVersion": "0.27.0",
       "installMethod": "poetry",
       "lastUsedAt": "2026-02-12T09:11:57.734Z"
     },
     "python": {
-      "version": "3.10.19"
+      "coreVersion": "0.3.9",
+      "pythonVersion": "3.10.19"
     }
   }
 }

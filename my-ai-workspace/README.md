@@ -45,7 +45,7 @@ Key endpoints:
 Before running the project, you can validate the whole workspace:
 
 ```bash
-npx rapidkit doctor --workspace
+npx rapidkit doctor workspace
 ```
 
 Sample output for this workspace:

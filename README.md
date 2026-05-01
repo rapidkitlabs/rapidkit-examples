@@ -1,14 +1,27 @@
 # RapidKit Examples
 
+[![Part of RapidKit Platform](https://img.shields.io/badge/Part%20of-RapidKit%20Workspace%20Platform-0f172a?logo=github)](https://github.com/getrapidkit/rapidkit)
+
 Official example projects for RapidKit.
 
 This repository contains production-style reference implementations that accompany RapidKit tutorials and articles.
 
+## Part of the RapidKit Ecosystem
+
+RapidKit Examples is the adoption layer of the platform.
+
+| Layer | Repository |
+|---|---|
+| Ecosystem Hub | [getrapidkit/rapidkit](https://github.com/getrapidkit/rapidkit) |
+| CLI | [getrapidkit/rapidkit-npm](https://github.com/getrapidkit/rapidkit-npm) |
+| IDE | [getrapidkit/rapidkit-vscode](https://github.com/getrapidkit/rapidkit-vscode) |
+| Core Engine | [getrapidkit/rapidkit-core](https://github.com/getrapidkit/rapidkit-core) |
+
+> **One-click start:** Install the [RapidKit VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode), open the **RapidKit Welcome** panel, and clone any example workspace directly into your environment — no CLI commands needed.
+
 ---
 
 ## 🚀 Featured Examples
-
-> 💡 **Quick Tip:** Install the [RapidKit VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode) to clone, run, and manage these workspaces with one click. See the [VS Code Extension section](#-vs-code-extension-recommended) below for details.
 
 ### 1. Quickstart Workspace (⚡ Beginner)
 
@@ -319,23 +332,35 @@ rapidkit dev -p 8013
 ```bash
 git clone https://github.com/getrapidkit/rapidkit-examples.git
 cd rapidkit-examples/saas-starter-workspace
-npx rapidkit doctor --workspace
+npx rapidkit doctor workspace
 ```
 
 **Run each service:**
 
 ```bash
 # Main SaaS API
-cd saas-api && source .rapidkit/activate && rapidkit init && rapidkit dev
+cd saas-api
+source .rapidkit/activate
+rapidkit init
+rapidkit dev
 
 # Admin API
-cd ../saas-admin && source .rapidkit/activate && rapidkit init && rapidkit dev -p 8001
+cd ../saas-admin
+source .rapidkit/activate
+rapidkit init
+rapidkit dev -p 8001
 
 # NestJS API
-cd ../saas-nest && source .rapidkit/activate && rapidkit init && rapidkit dev -p 8002
+cd ../saas-nest
+source .rapidkit/activate
+rapidkit init
+rapidkit dev -p 8002
 
 # Webhooks service
-cd ../saas-webhooks && source .rapidkit/activate && rapidkit init && rapidkit dev -p 8003
+cd ../saas-webhooks
+source .rapidkit/activate
+rapidkit init
+rapidkit dev -p 8003
 ```
 
 **Key endpoints:**
@@ -350,21 +375,21 @@ cd ../saas-webhooks && source .rapidkit/activate && rapidkit init && rapidkit de
 
 ```bash
 cd quickstart-workspace
-npx rapidkit doctor --workspace
+npx rapidkit doctor workspace
 ```
 
 **AI Agent Workspace:**
 
 ```bash
 cd my-ai-workspace
-npx rapidkit doctor --workspace
+npx rapidkit doctor workspace
 ```
 
 **SaaS Starter Workspace:**
 
 ```bash
 cd saas-starter-workspace
-npx rapidkit doctor --workspace
+npx rapidkit doctor workspace
 ```
 
 **Checks:**

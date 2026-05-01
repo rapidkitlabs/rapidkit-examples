@@ -12,7 +12,7 @@ Production-ready FastAPI AI Assistant example generated with RapidKit.
 From workspace root (`../`):
 
 ```bash
-npx rapidkit doctor --workspace
+npx rapidkit doctor workspace
 npx rapidkit --help
 ```
 

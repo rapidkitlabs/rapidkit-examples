@@ -33,7 +33,7 @@ cd saas-starter-workspace
 
 ```bash
 # Check all 4 projects are detected
-rapidkit doctor --workspace
+rapidkit doctor workspace
 ```
 
 **Expected output:**
@@ -275,15 +275,28 @@ curl -X POST http://127.0.0.1:8003/api/webhooks/replay/evt_test_123
 
 ```bash
 # Test individual services
-cd saas-api && rapidkit test
-cd saas-admin && rapidkit test
-cd saas-nest && rapidkit test
-cd saas-webhooks && rapidkit test
+cd saas-api
+rapidkit test
+cd ..
+
+cd saas-admin
+rapidkit test
+cd ..
+
+cd saas-nest
+rapidkit test
+cd ..
+
+cd saas-webhooks
+rapidkit test
+cd ..
 
 # Or test all services
 for svc in saas-api saas-admin saas-nest saas-webhooks; do
   echo "Testing $svc..."
-  cd $svc && rapidkit test && cd ..
+  cd "$svc"
+  rapidkit test
+  cd ..
 done
 ```
 
@@ -397,13 +410,14 @@ docker-compose up -d redis
 
 **"Module not found" errors:**
 ```bash
-cd <project> && rapidkit init
+cd <project>
+rapidkit init
 ```
 
 **Services won't start:**
 ```bash
 # Check health
-rapidkit doctor --workspace
+rapidkit doctor workspace
 
 # Verify ports are available
 lsof -i :8000-8003
