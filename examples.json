@@ -1,12 +1,35 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "schemaVersion": "rapidkit.examples-index.v1",
     "version": "1.0.0",
     "lastUpdated": "2026-02-16T00:00:00Z",
     "repository": "https://github.com/getrapidkit/rapidkit-examples",
+    "publicationPolicy": {
+        "repositoryRole": "public_cloneable_examples_and_showcases",
+        "freeWorkspacesMustBeCloneable": true,
+        "proSourcePolicy": "private_source_public_showcase",
+        "catalogPromotionRequiresManifest": true
+    },
+    "proShowcases": [
+        {
+            "slug": "saas-starter-pro-workspace",
+            "publicSlug": "saas-starter-pro",
+            "workspaceSlug": "saas-starter-pro-workspace",
+            "title": "SaaS Starter Pro",
+            "path": "pro-showcase/saas-starter-pro-workspace",
+            "sourcePolicy": "showcase_only",
+            "privateProductIndex": "../rapidkit-examples-pro/products.json",
+            "freeScaffoldPath": "saas-starter-workspace",
+            "status": "public_showcase"
+        }
+    ],
     "workspaces": [
         {
             "id": "my-ai-workspace",
             "name": "my-ai-workspace",
+            "publicSlug": "ai-agent-workspace",
+            "tier": "free",
+            "lifecycleStatus": "published",
             "title": "AI Agent Workspace",
             "description": "Multi-provider AI assistant with FastAPI and NestJS implementations featuring streaming, caching, health checks, and support ticket endpoints.",
             "path": "my-ai-workspace",
@@ -107,6 +130,9 @@
         {
             "id": "quickstart-workspace",
             "name": "quickstart-workspace",
+            "publicSlug": "quickstart-workspace",
+            "tier": "free",
+            "lifecycleStatus": "published",
             "title": "Quickstart Workspace",
             "description": "Production-ready FastAPI demonstrating 5-minute setup with auth, database, caching, and monitoring.",
             "path": "quickstart-workspace",
@@ -211,6 +237,9 @@
         {
             "id": "saas-starter-workspace",
             "name": "saas-starter-workspace",
+            "publicSlug": "saas-starter-workspace",
+            "tier": "free",
+            "lifecycleStatus": "published",
             "title": "SaaS Starter Workspace",
             "description": "Multi-project SaaS foundation with FastAPI and NestJS services covering auth, billing, admin operations, and webhook processing.",
             "path": "saas-starter-workspace",
