@@ -9,6 +9,7 @@ This folder exists for discovery, SEO, and buyer education. It does not contain 
 | Product | Public page | Free starting point | Pro source |
 | --- | --- | --- | --- |
 | SaaS Starter Pro | [saas-starter-pro-workspace](saas-starter-pro-workspace) | [../saas-starter-workspace](../saas-starter-workspace) | Private `rapidkit-examples-pro` |
+| AI Support Agent Pro | [ai-support-agent-pro-workspace](ai-support-agent-pro-workspace) | [../my-ai-workspace](../my-ai-workspace) | Private `rapidkit-examples-pro` |
 
 ## Publishing Rule
 

@@ -21,6 +21,17 @@
             "privateProductIndex": "../rapidkit-examples-pro/products.json",
             "freeScaffoldPath": "saas-starter-workspace",
             "status": "public_showcase"
+        },
+        {
+            "slug": "ai-support-agent-pro-workspace",
+            "publicSlug": "ai-support-agent-pro",
+            "workspaceSlug": "ai-support-agent-pro-workspace",
+            "title": "AI Support Agent Pro",
+            "path": "pro-showcase/ai-support-agent-pro-workspace",
+            "sourcePolicy": "showcase_only",
+            "privateProductIndex": "../rapidkit-examples-pro/products.json",
+            "freeScaffoldPath": "my-ai-workspace",
+            "status": "public_showcase"
         }
     ],
     "workspaces": [
