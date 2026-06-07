@@ -1,10 +1,25 @@
 # RapidKit Examples
 
-[![Part of RapidKit Platform](https://img.shields.io/badge/Part%20of-RapidKit%20Workspace%20Platform-0f172a?logo=github)](https://github.com/getrapidkit/rapidkit)
+[![Part of RapidKit Platform](https://img.shields.io/badge/Part%20of-RapidKit%20Workspace%20Platform-0f172a?logo=github)](https://github.com/rapidkitlabs/rapidkit)
 
 Official example projects for RapidKit.
 
 This repository contains production-style reference implementations that accompany RapidKit tutorials and articles.
+
+It is also the public discovery layer for Pro workspaces. Pro showcase pages live under [`pro-showcase`](pro-showcase), but paid source code, customer archives, and release evidence stay private in `rapidkit-examples-pro`.
+
+## Product Standard
+
+This repository follows the RapidKit + Workspai workspace product operating standard:
+
+- Free examples are cloneable and useful on their own.
+- Pro showcases are public, source-free, and honest about availability.
+- Catalog promotion happens only after a Workspai manifest is backed by a real example or release candidate.
+- Product planning is managed separately; this repository is the public publication surface, not a backlog.
+
+Machine-readable index: [`examples.json`](examples.json)
+
+Public Pro showcase: [`pro-showcase`](pro-showcase)
 
 ## Part of the RapidKit Ecosystem
 
@@ -12,10 +27,10 @@ RapidKit Examples is the adoption layer of the platform.
 
 | Layer | Repository |
 |---|---|
-| Ecosystem Hub | [getrapidkit/rapidkit](https://github.com/getrapidkit/rapidkit) |
-| CLI | [getrapidkit/rapidkit-npm](https://github.com/getrapidkit/rapidkit-npm) |
-| IDE | [getrapidkit/rapidkit-vscode](https://github.com/getrapidkit/rapidkit-vscode) |
-| Core Engine | [getrapidkit/rapidkit-core](https://github.com/getrapidkit/rapidkit-core) |
+| Ecosystem Hub | [getrapidkit/rapidkit](https://github.com/rapidkitlabs/rapidkit) |
+| CLI | [getrapidkit/rapidkit-npm](https://github.com/rapidkitlabs/rapidkit-npm) |
+| IDE | [getrapidkit/rapidkit-vscode](https://github.com/rapidkitlabs/rapidkit-vscode) |
+| Core Engine | [getrapidkit/rapidkit-core](https://github.com/rapidkitlabs/rapidkit-core) |
 
 > **One-click start:** Install the [RapidKit VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode), open the **RapidKit Welcome** panel, and clone any example workspace directly into your environment — no CLI commands needed.
 
@@ -148,7 +163,7 @@ code --install-extension rapidkit.rapidkit-vscode
 1. Open VS Code
 2. Open Command Palette (`Cmd/Ctrl+Shift+P`)
 3. Type: **RapidKit: Import Workspace**
-4. Paste: `https://github.com/getrapidkit/rapidkit-examples.git`
+4. Paste: `https://github.com/rapidkitlabs/rapidkit-examples.git`
 5. Select workspace (quickstart-workspace, my-ai-workspace, or saas-starter-workspace)
 6. Click **Import & Setup**
 
@@ -173,7 +188,7 @@ code --install-extension rapidkit.rapidkit-vscode
 
 ```
 Command Palette → RapidKit: Import Workspace
-→ Paste: https://github.com/getrapidkit/rapidkit-examples.git
+→ Paste: https://github.com/rapidkitlabs/rapidkit-examples.git
 → Select: saas-starter-workspace
 → Click: Import & Setup
 ```
@@ -275,7 +290,7 @@ Command Palette → RapidKit: Import Workspace
 **Production-ready FastAPI with auth, database, caching:**
 
 ```bash
-git clone https://github.com/getrapidkit/rapidkit-examples.git
+git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/quickstart-workspace/product-api
 
 # Start infrastructure
@@ -302,7 +317,7 @@ rapidkit dev
 **FastAPI:**
 
 ```bash
-git clone https://github.com/getrapidkit/rapidkit-examples.git
+git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/my-ai-workspace/ai-agent
 source .rapidkit/activate
 rapidkit init
@@ -330,7 +345,7 @@ rapidkit dev -p 8013
 ### SaaS Starter Workspace (Advanced)
 
 ```bash
-git clone https://github.com/getrapidkit/rapidkit-examples.git
+git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/saas-starter-workspace
 npx rapidkit doctor workspace
 ```

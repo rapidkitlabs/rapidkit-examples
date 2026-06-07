@@ -5,7 +5,7 @@ RapidKit workspace demonstrating production-ready API development in 5 minutes.
 **Related Articles:**
 - Medium: [From Zero to Production FastAPI with RapidKit: Build a Real E-Commerce API](https://medium.com/@rapidkit/from-zero-to-production-fastapi-with-rapidkit-build-a-real-e-commerce-api-80390a34ffe3)
 - Dev.to: [Build a Production-Ready FastAPI E-Commerce API with RapidKit (Step-by-Step)](https://dev.to/rapidkit/build-a-production-ready-fastapi-e-commerce-api-with-rapidkit-step-by-step-llm)
-- Source repository: https://github.com/getrapidkit/rapidkit-examples/tree/main/quickstart-workspace
+- Source repository: https://github.com/rapidkitlabs/rapidkit-examples/tree/main/quickstart-workspace
 
 **Projects in this workspace:**
 - [product-api](product-api/README.md) - Production-ready FastAPI with auth, database, caching, and monitoring
@@ -19,7 +19,7 @@ RapidKit workspace demonstrating production-ready API development in 5 minutes.
 
 ```bash
 # Clone the examples repository
-git clone https://github.com/getrapidkit/rapidkit-examples.git
+git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/quickstart-workspace
 
 # Or create from scratch

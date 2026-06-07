@@ -1,6 +1,6 @@
 # saas-webhooks
 
-Dedicated webhook processor with Stripe-style signature verification, event logging, and replay capability. Minimal FastAPI service generated with [RapidKit](https://github.com/getrapidkit/rapidkit-core).
+Dedicated webhook processor with Stripe-style signature verification, event logging, and replay capability. Minimal FastAPI service generated with [RapidKit](https://github.com/rapidkitlabs/rapidkit-core).
 
 **Related:** Part of [saas-starter-workspace](../README.md) - Production SaaS architecture with 4 microservices.
 
@@ -553,5 +553,5 @@ rapidkit dev --port 8003
 
 **Need help?**
 - Documentation: https://getrapidkit.com/docs
-- GitHub Issues: https://github.com/getrapidkit/rapidkit-core/issues
+- GitHub Issues: https://github.com/rapidkitlabs/rapidkit-core/issues
 - Stripe Support: https://support.stripe.com

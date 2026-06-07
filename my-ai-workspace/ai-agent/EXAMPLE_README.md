@@ -2,10 +2,9 @@
 
 Companion document for the published tutorial:
 
-- Article: [Front/Docs/devto/medium-7.md](../../../Docs/devto/medium-7.md)
 - Medium: https://rapidkit.medium.com/build-your-first-ai-agent-with-rapidkit-in-10-minutes-f38a6a12088d
 - Dev.to: https://dev.to/rapidkit/build-your-first-ai-agent-with-rapidkit-in-10-minutes-3dj6
-- Source: https://github.com/getrapidkit/rapidkit-examples/tree/main/my-ai-workspace
+- Source: https://github.com/rapidkitlabs/rapidkit-examples/tree/main/my-ai-workspace
 
 ## What this example covers
 

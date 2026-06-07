@@ -1,10 +1,10 @@
-# my-ai-workspace
+# AI Agent Workspace
 
 RapidKit workspace for AI agent examples (FastAPI + NestJS).
 
 - Medium: https://rapidkit.medium.com/build-your-first-ai-agent-with-rapidkit-in-10-minutes-f38a6a12088d
 - Dev.to: https://dev.to/rapidkit/build-your-first-ai-agent-with-rapidkit-in-10-minutes-3dj6
-- Source repository: https://github.com/getrapidkit/rapidkit-examples/tree/main/my-ai-workspace
+- Source repository: https://github.com/rapidkitlabs/rapidkit-examples/tree/main/my-ai-workspace
 - FastAPI project: [ai-agent](ai-agent/README.md)
 - NestJS project: [ai-agent-nest](ai-agent-nest/README.md)
 

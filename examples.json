@@ -3,7 +3,7 @@
     "schemaVersion": "rapidkit.examples-index.v1",
     "version": "1.0.0",
     "lastUpdated": "2026-02-16T00:00:00Z",
-    "repository": "https://github.com/getrapidkit/rapidkit-examples",
+    "repository": "https://github.com/rapidkitlabs/rapidkit-examples",
     "publicationPolicy": {
         "repositoryRole": "public_cloneable_examples_and_showcases",
         "freeWorkspacesMustBeCloneable": true,

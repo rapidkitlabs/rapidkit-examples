@@ -5,7 +5,7 @@ Production-ready multi-service SaaS architecture with FastAPI, NestJS, and advan
 **Related Articles:**
 - Medium: [Building Production SaaS Architecture: Deep Dive into Multi-Service Implementation](https://rapidkit.medium.com/building-production-saas-architecture-deep-dive-into-multi-service-implementation-8a838f36e4ad)
 - Dev.to: [Build Production SaaS: Code Walkthrough (FastAPI + NestJS + Webhooks)](https://dev.to/rapidkit/build-production-saas-code-walkthrough-4c7c)
-- Source repository: https://github.com/getrapidkit/rapidkit-examples/tree/main/saas-starter-workspace
+- Source repository: https://github.com/rapidkitlabs/rapidkit-examples/tree/main/saas-starter-workspace
 
 **Projects in this workspace:**
 - [saas-api](saas-api/README.md) - Product API with auth, subscriptions, teams (FastAPI + DDD)
@@ -21,7 +21,7 @@ Production-ready multi-service SaaS architecture with FastAPI, NestJS, and advan
 
 ```bash
 # Clone the examples repository
-git clone https://github.com/getrapidkit/rapidkit-examples.git
+git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/saas-starter-workspace
 
 # Or create from scratch
@@ -434,5 +434,5 @@ export STRIPE_WEBHOOK_SECRET="whsec_test"
 
 **Need help?**
 - Documentation: https://getrapidkit.com/docs
-- GitHub Issues: https://github.com/getrapidkit/rapidkit-core/issues
+- GitHub Issues: https://github.com/rapidkitlabs/rapidkit-core/issues
 - Community: https://discord.gg/rapidkit
