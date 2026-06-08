@@ -43,12 +43,12 @@ describe("Cors Module Integration", () => {
   });
 
   it("should surface health payload through both controllers", () => {
-    const controllerHealth = controller.getHealth();
+    const metadata = controller.getMetadata();
     const dedicatedHealth = healthController.getModuleHealth();
 
-    expect(controllerHealth.status).toBe("ok");
+    expect(metadata.enabled).toBe(true);
     expect(dedicatedHealth.status).toBe("ok");
-    expect(controllerHealth.policy.allow_origins).toBeDefined();
+    expect(metadata.policy.allow_origins).toBeDefined();
     expect(Array.isArray(dedicatedHealth.features)).toBe(true);
   });
 

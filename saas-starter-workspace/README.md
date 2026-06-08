@@ -52,6 +52,7 @@ rapidkit doctor workspace
 **Terminal 1 — Product API (port 8000):**
 ```bash
 cd saas-api
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev
@@ -60,6 +61,7 @@ rapidkit dev
 **Terminal 2 — Admin API (port 8001):**
 ```bash
 cd saas-admin
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev --port 8001
@@ -68,6 +70,7 @@ rapidkit dev --port 8001
 **Terminal 3 — NestJS Service (port 8002):**
 ```bash
 cd saas-nest
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev --port 8002
@@ -76,6 +79,7 @@ rapidkit dev --port 8002
 **Terminal 4 — Webhook Processor (port 8003):**
 ```bash
 cd saas-webhooks
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev --port 8003

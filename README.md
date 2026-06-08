@@ -297,6 +297,7 @@ cd rapidkit-examples/quickstart-workspace/product-api
 docker-compose up -d postgres redis
 
 # Install & run
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev
@@ -319,6 +320,7 @@ rapidkit dev
 ```bash
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/my-ai-workspace/ai-agent
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev
@@ -328,6 +330,7 @@ rapidkit dev
 
 ```bash
 cd rapidkit-examples/my-ai-workspace/ai-agent-nest
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev -p 8013
@@ -355,24 +358,28 @@ npx rapidkit doctor workspace
 ```bash
 # Main SaaS API
 cd saas-api
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev
 
 # Admin API
 cd ../saas-admin
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev -p 8001
 
 # NestJS API
 cd ../saas-nest
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev -p 8002
 
 # Webhooks service
 cd ../saas-webhooks
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev -p 8003

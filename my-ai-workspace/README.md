@@ -12,6 +12,7 @@ RapidKit workspace for AI agent examples (FastAPI + NestJS).
 
 ```bash
 cd ai-agent
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev
@@ -26,6 +27,7 @@ Notes:
 
 ```bash
 cd ai-agent-nest
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev -p 8013

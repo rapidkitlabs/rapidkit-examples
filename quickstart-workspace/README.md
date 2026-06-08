@@ -43,6 +43,7 @@ docker-compose up -d postgres redis
 
 ```bash
 cd ecommerce-api
+cp .env.example .env
 source .rapidkit/activate
 rapidkit init
 rapidkit dev
