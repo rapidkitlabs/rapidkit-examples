@@ -53,6 +53,24 @@ poetry run pytest tests/ -q
 Test counts can change with the example. Treat the current command result as
 the evidence for the checked-out revision.
 
+## Deployment
+
+This example includes the RapidKit deployment module assets so it can move from
+local development to a container or production host without changing the
+Workspace Intelligence flow.
+
+Before deploying, copy `.env.example` to `.env`, set runtime secrets such as
+`OPENAI_API_KEY`, and run the workspace checks that produce release evidence:
+
+```bash
+npx workspai workspace model --json
+npx workspai pipeline --json --strict
+```
+
+Use the generated `Dockerfile`, `docker-compose.yml`, and project health
+endpoints as the deployment baseline for local containers, CI, or a managed
+hosting target.
+
 ## Notes on OpenAI
 
 - OpenAI provider is implemented in `src/modules/free/ai/ai_assistant/providers/openai_provider.py`.
