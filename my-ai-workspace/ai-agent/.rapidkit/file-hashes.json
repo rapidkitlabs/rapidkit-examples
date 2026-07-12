@@ -66,9 +66,9 @@
       "version": "0.1.32"
     },
     "src/modules/free/ai/ai_assistant/ai_assistant.py": {
-      "hash": "fe865d9601a1932685876a79acfb6e2f05aa5a76006a1bd173451befd25db6dc",
+      "hash": "14e74fa02aa8bf08130fb3384488acee49670e71300563dea4c7675d0f0ebb31",
       "module": "ai_assistant",
-      "version": "0.1.11"
+      "version": "0.1.20"
     },
     "src/modules/free/ai/ai_assistant/ai_assistant_types.py": {
       "hash": "12a5bbbc4eac744e58f5872b0c935f0838ee1db255a6f9653007637d8dc5753d",
@@ -86,9 +86,9 @@
       "version": "0.1.10"
     },
     "src/modules/free/essentials/deployment/deployment.py": {
-      "hash": "2983a3c6c9ba69d191b1e8d1526df861376e5be6ed4f7c004429d440f21d15d5",
+      "hash": "eb9fb79e90d72c6f776d05bab1423e9941610e622a87c4a6573a1a386b5bd8cb",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/deployment/routers/deployment.py": {
       "hash": "34de40b5e52b9f805545da8e6df26db7f83a0f45715c5bfdeb89f5f0fc69f6b9",
@@ -101,9 +101,9 @@
       "version": "0.1.9"
     },
     "src/modules/free/essentials/logging/logging.py": {
-      "hash": "620e8436883effc20adcc082a3fc5284f138dc54bd496222bf0496b90531af65",
+      "hash": "ac44c2df8988bea29ef1fc397dc19912a2751578cfa616c3038f86b4f3fc47fe",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/logging/routers/logging.py": {
       "hash": "1915b7339acefd7791cf9f18bdae4d6e4d8160cb2a7f9edc9d22b6111e28bc4a",
@@ -171,9 +171,9 @@
       "version": "0.1.9"
     },
     "tests/modules/e2e/free/essentials/middleware/test_middleware_e2e.py": {
-      "hash": "a891860021f62be65d6e213939695b9403944e7656c68cd9c20a5869236c808d",
+      "hash": "6d6a48a868f2c996c42b6e080ca49869dfb372485e59033a37a98f433513ac89",
       "module": "middleware",
-      "version": "0.1.20"
+      "version": "0.1.24"
     },
     "tests/modules/e2e/free/essentials/settings/test_settings_e2e.py": {
       "hash": "55eadb4dfbaf61c7fb07ecce3dbb5cf6a5c9c02ac93bb3d58f7a4d2bde73dadc",
@@ -181,19 +181,19 @@
       "version": "0.1.41"
     },
     "tests/modules/free/essentials/deployment/test_deployment_integration.py": {
-      "hash": "85052ae353b1f6884b7d6182fe1eec3c5752d73eb1c8de2144300761b3b160c6",
+      "hash": "9bc3ea891bbf0ae81812eaa8fb0875517d4b4a9f0c9112c679a8b4b540862554",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "tests/modules/free/essentials/logging/test_logging_integration.py": {
-      "hash": "fdf38a65a7490cab65a3f4da08f53e03ea0efcc700a16e70b2ae0da7e95ad974",
+      "hash": "cf9f02cb5fd9f050cd1984be95e58db5641d3cc8030c7f7ad2e7ed969e882826",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "tests/modules/free/essentials/middleware/test_middleware_integration.py": {
-      "hash": "313e3c001b0954afeaa0bceeb07760f21f6e9dd6295fd916453ca6829a31c1fc",
+      "hash": "c5a7f5ce976d398dfa0236bb3ffca2f4e3eaf313bb922093b7d510ad113a8bcb",
       "module": "middleware",
-      "version": "0.1.20"
+      "version": "0.1.24"
     },
     "tests/modules/free/essentials/settings/test_settings_integration.py": {
       "hash": "2184edaf11769a56ab54fc2102e8637877d760e039e62ef024914eacf3c74fc7",

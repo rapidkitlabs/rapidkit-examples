@@ -8,7 +8,7 @@ import { dirname } from 'path';
 import type { LoggingConfiguration } from './configuration';
 
 const VENDOR_MODULE = 'logging';
-const VENDOR_VERSION = '0.1.9';
+const VENDOR_VERSION = '0.1.13';
 const VENDOR_EXPORTS = [
   'LoggingConfig',
   'MetricsBridgeHandler',

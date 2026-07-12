@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "kind": "rapidkit.workspace.contract",
+  "generatedAt": "2026-07-12T17:03:44.207Z",
+  "workspace": {
+    "name": "python-only-workspace",
+    "profile": "python-only"
+  },
+  "projects": []
+}

@@ -68,4 +68,4 @@ async def test_redis_health_registration(monkeypatch):
 def test_describe_cache_includes_metadata():
     payload = describe_cache()
     assert payload["module"] == "redis"
-    assert payload.get("module_version") == "0.1.17"
+    assert payload.get("module_version") == "0.1.23"

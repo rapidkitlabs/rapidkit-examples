@@ -1,0 +1,12 @@
+{
+  "name": "rapidkit-examples",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Contract-backed example workspaces for Workspai and RapidKit Core",
+  "scripts": {
+    "check": "git ls-files -z | node scripts/validate-examples.mjs --tracked-stdin"
+  },
+  "engines": {
+    "node": ">=20.19.6"
+  }
+}

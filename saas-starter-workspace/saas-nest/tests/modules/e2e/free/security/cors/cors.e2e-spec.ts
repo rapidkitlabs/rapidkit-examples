@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { CorsModule } from "../../../../../../src/modules/free/security/cors/cors.module";
+import { CorsModule } from "@modules/free/security/cors/cors.module";
 
 describe("Cors NestJS E2E", () => {
   it("compiles the module", async () => {

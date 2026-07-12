@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "kind": "rapidkit.workspace.contract",
+  "generatedAt": "2026-07-12T17:03:43.525Z",
+  "workspace": {
+    "name": "java-only-workspace",
+    "profile": "java-only"
+  },
+  "projects": []
+}

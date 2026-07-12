@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { ApiKeysModule } from "../../../../../../src/modules/free/auth/api_keys/api-keys.module";
+import { ApiKeysModule } from "@modules/free/auth/api_keys/api-keys.module";
 
 describe("ApiKeys NestJS E2E", () => {
   it("compiles the module", async () => {

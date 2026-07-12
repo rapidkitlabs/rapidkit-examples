@@ -9,21 +9,18 @@ Dedicated webhook processor with Stripe-style signature verification, event logg
 ## ⚡ Quick Start
 
 ```bash
-# Load the project-aware RapidKit CLI
-source .rapidkit/activate
-
 # Bootstrap dependencies
-rapidkit init
+npx workspai init
 
 # Copy env templates and install hooks
 ./bootstrap.sh
 
 # Start development server on port 8003
-rapidkit dev --port 8003
+npx workspai dev --port 8003
 # Or: make dev
 
 # Run tests
-rapidkit test
+npx workspai test
 
 # Lint and type-check
 make lint
@@ -369,7 +366,7 @@ export STRIPE_WEBHOOK_SECRET="whsec_test"
 
 ```bash
 # Run all tests
-rapidkit test
+npx workspai test
 
 # Test specific scenarios
 pytest tests/test_webhooks.py::test_signature_verification -v
@@ -403,7 +400,7 @@ _EVENTS: dict[str, WebhookLogEntry] = {}
 **Production:**
 ```python
 # Add db_postgres module
-rapidkit add module db_postgres
+npx workspai add module db_postgres
 
 # Create webhooks table
 CREATE TABLE webhook_events (
@@ -473,7 +470,7 @@ async def send_to_dlq(event: StripeWebhookRequest):
 
 ```bash
 # Add observability module
-rapidkit add module observability.core
+npx workspai add module observability.core
 
 # Track metrics
 webhook_ingested_total.inc()
@@ -548,7 +545,7 @@ curl -X POST http://localhost:8003/api/webhooks/replay/{event_id}
 **Port already in use:**
 ```bash
 # Run on different port
-rapidkit dev --port 8003
+npx workspai dev --port 8003
 ```
 
 **Need help?**

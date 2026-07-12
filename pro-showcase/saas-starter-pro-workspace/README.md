@@ -32,7 +32,7 @@ Use the public SaaS Starter Workspace first:
 ```bash
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/saas-starter-workspace
-npx rapidkit doctor --workspace
+npx workspai doctor workspace
 ```
 
 ## Pro Delivery Standard

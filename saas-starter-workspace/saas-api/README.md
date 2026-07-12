@@ -9,21 +9,18 @@ Product API for SaaS applications with authentication, subscriptions, and team m
 ## ⚡ Quick Start
 
 ```bash
-# Load the project-aware RapidKit CLI
-source .rapidkit/activate
-
 # Bootstrap dependencies (creates .venv + installs Poetry deps)
-rapidkit init
+npx workspai init
 
 # Copy env templates and install hooks/tooling
 ./bootstrap.sh
 
 # Start development server
-rapidkit dev
+npx workspai dev
 # Or: make dev
 
 # Run tests
-rapidkit test
+npx workspai test
 # Or: make test
 
 # Type-check and lint
@@ -41,9 +38,10 @@ make audit
 - Health Check: http://localhost:8000/health
 - Module Health: http://localhost:8000/api/health/module/*
 
-> **Tip:** Re-source `.rapidkit/activate` when opening a new shell to keep the project-local `rapidkit` launcher on your PATH.
+> **Tip:** `npx workspai` resolves the project runtime without activating a
+> project-local legacy launcher.
 
-> **Tip:** Re-run `rapidkit init` when dependencies change. Use `SKIP_INIT=1 make install` if you only need to refresh tooling/hooks.
+> **Tip:** Re-run `npx workspai init` when dependencies change. Use `SKIP_INIT=1 make install` if you only need to refresh tooling/hooks.
 
 ---
 
@@ -259,25 +257,24 @@ print(teams.json())
 ## 🚀 Add More Modules
 
 ```bash
-source .rapidkit/activate
 
 # Add database
-rapidkit add module db_postgres
+npx workspai add module db_postgres
 
 # Add Redis caching
-rapidkit add module redis
+npx workspai add module redis
 
 # Add email notifications
-rapidkit add module email
+npx workspai add module email
 
 # Add monitoring
-rapidkit add module observability.core
+npx workspai add module observability.core
 ```
 
 **After adding modules:**
 1. Update `.env` with module configuration
-2. Run `rapidkit init` to install dependencies
-3. Restart dev server: `rapidkit dev`
+2. Run `npx workspai init` to install dependencies
+3. Restart dev server: `npx workspai dev`
 
 ---
 
@@ -319,7 +316,7 @@ openssl rand -base64 32
 
 ```bash
 # Run all tests
-rapidkit test
+npx workspai test
 
 # With coverage
 pytest --cov=src tests/
@@ -385,9 +382,9 @@ Configure load balancer/orchestrator:
 - PBKDF2 password hashing
 
 **RapidKit documentation:**
-- [Modules Catalog](https://getrapidkit.com/docs/modules)
-- [CLI Reference](https://getrapidkit.com/docs/cli)
-- [Deployment Guide](https://getrapidkit.com/docs/deployment)
+- [Modules Catalog](https://www.workspai.dev/docs/cli/modules)
+- [CLI Reference](https://www.workspai.dev/docs/cli)
+- [Deployment Guide](https://www.workspai.dev/docs/guides)
 
 ---
 
@@ -395,13 +392,13 @@ Configure load balancer/orchestrator:
 
 **Import errors after adding modules:**
 ```bash
-rapidkit init
+npx workspai init
 ```
 
 **Port already in use:**
 ```bash
 # Run on different port
-rapidkit dev --port 8080
+npx workspai dev --port 8080
 ```
 
 **Module health check fails:**

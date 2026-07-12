@@ -46,39 +46,39 @@
       "version": "0.1.10"
     },
     "src/health/__init__.py": {
-      "hash": "ba984080d6ab3fab87ac0e145d50bf2f0bf4cae23614a49c4b5f36e02d160916",
-      "module": "security_headers",
-      "version": "0.1.3"
+      "hash": "1e809b8218324f7e3da73a059676fc2bb86812e09506939480eaa38de863489d",
+      "module": "settings",
+      "version": "0.1.45"
     },
     "src/health/auth_core.py": {
-      "hash": "2258885fb8a201beb11b90259d2f8c2530f81d92765f47b0ef22a41232e4014d",
+      "hash": "d41faed6bb0944ff46bde30b7f8cd4799ccff9a9a9027dcf0ee65a2351b52f7a",
       "module": "auth_core",
-      "version": "0.1.10"
+      "version": "0.1.14"
     },
     "src/health/deployment.py": {
-      "hash": "ab426c1f0976a9cd585ce5f793b170ce76195887664c398b3387c26b28ed5cb4",
+      "hash": "d432bfff3b8d21900d63297ced48376399a32ce2194503e02bb69ee1d2c053ce",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "src/health/logging.py": {
-      "hash": "133d7e517375892a04d2f890efa661382f5ba45a7d6b9474ff0bfe2366753e64",
+      "hash": "306f1c88f57e5e94923232d647ab8fe679154ba88bacad63d3baf0441664986f",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "src/health/middleware.py": {
-      "hash": "0cc7cfe2a4597b22c33b98e27b015adba1772858530eb9eaa4b976627965f20f",
+      "hash": "b0f3f7943c47fdc592e93add0107efb35a08065ac7bf033270ed41c18c4fe287",
       "module": "middleware",
-      "version": "0.1.20"
+      "version": "0.1.24"
     },
     "src/health/postgres.py": {
-      "hash": "54e194e61b0d715cdf9e354485c59f09f152e9c1685f78225e827ae3ff478c26",
+      "hash": "99092d0c7700e43cbf4525709ea892ede070b8b1416ccec146ab8d3b6e91e98b",
       "module": "db_postgres",
-      "version": "0.1.28"
+      "version": "0.1.31"
     },
     "src/health/redis.py": {
-      "hash": "e98c4fae51ce57bf9c70eac03190ec7948f5299eb4858a01178e8dc8896e5507",
+      "hash": "4d2208b74cf7ccdc0bd673bf124a19527dcc043e0c33539ba6cf9e86768f37ce",
       "module": "redis",
-      "version": "0.1.17"
+      "version": "0.1.23"
     },
     "src/health/registry.py": {
       "hash": "5913b8b9f802b0dd8d26b639d2b8ee02b193dc8aa6d95d53cfe78e554bfde58c",
@@ -86,14 +86,14 @@
       "version": "0.1.3"
     },
     "src/health/security_headers.py": {
-      "hash": "b16c1b122a73c8703de3e3838ecb0541433721b31cdde75fdbbc0c50051bcbb6",
+      "hash": "6b98caa883f4644b16be74699db151ed01328ba80cf567c9d9921339e2abfe9f",
       "module": "security_headers",
-      "version": "0.1.3"
+      "version": "0.1.7"
     },
     "src/health/settings.py": {
-      "hash": "9a3637c00c50a3cdfca6bfb9dd0e77529ae01495d443c8b36a72131ad406d2b6",
+      "hash": "ccfbdd24a636038de230ee9fd9132bf5310af6f627c1cd504f7fdc8d8ed5c133",
       "module": "settings",
-      "version": "0.1.41"
+      "version": "0.1.45"
     },
     "src/modules/free/auth/core/auth/core.py": {
       "hash": "d640e7f87904409db79ef53341fad4ecdf81e7e0d4268b07b91f16e62f0eeb2e",
@@ -131,14 +131,14 @@
       "version": "0.1.10"
     },
     "src/modules/free/cache/redis/__init__.py": {
-      "hash": "d3974f90e1d4054f89b63279442c7ec17a094643ec7475c5bd64c4df7cd6d8b1",
+      "hash": "0dee64d414b362a9c97122eabdd827240158ea2d7540d6f2f0d98d904df1b356",
       "module": "redis",
-      "version": "0.1.17"
+      "version": "0.1.23"
     },
     "src/modules/free/cache/redis/client.py": {
-      "hash": "78de230c03b46c97a4c0ce85505b089fc4e7d89b541d7c1ebad44b5500892ecb",
+      "hash": "e2f8cddbde484ca2dcfab416c3f991e43ed0f81fabf174b1656d4c28aa1fedb4",
       "module": "redis",
-      "version": "0.1.17"
+      "version": "0.1.23"
     },
     "src/modules/free/cache/redis/redis.py": {
       "hash": "cad9e7c3eab6f6db50c83e4864c85379de8865aa2119f19ae1194cf71fe9e99c",
@@ -161,9 +161,9 @@
       "version": "0.1.10"
     },
     "src/modules/free/essentials/deployment/deployment.py": {
-      "hash": "2983a3c6c9ba69d191b1e8d1526df861376e5be6ed4f7c004429d440f21d15d5",
+      "hash": "eb9fb79e90d72c6f776d05bab1423e9941610e622a87c4a6573a1a386b5bd8cb",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/deployment/routers/deployment.py": {
       "hash": "34de40b5e52b9f805545da8e6df26db7f83a0f45715c5bfdeb89f5f0fc69f6b9",
@@ -176,9 +176,9 @@
       "version": "0.1.9"
     },
     "src/modules/free/essentials/logging/logging.py": {
-      "hash": "620e8436883effc20adcc082a3fc5284f138dc54bd496222bf0496b90531af65",
+      "hash": "ac44c2df8988bea29ef1fc397dc19912a2751578cfa616c3038f86b4f3fc47fe",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/logging/routers/logging.py": {
       "hash": "1915b7339acefd7791cf9f18bdae4d6e4d8160cb2a7f9edc9d22b6111e28bc4a",
@@ -231,14 +231,14 @@
       "version": "0.1.41"
     },
     "src/modules/free/security/security_headers/routers/security_headers.py": {
-      "hash": "7cc8ab5d6bdec57dfe031e65100c7383d2ff30ac473e862b62129190fdeb5e18",
+      "hash": "7882f59f52dd32e416d432fc3683d9b6cd878faf0969134a62d6d84cff832f89",
       "module": "security_headers",
-      "version": "0.1.3"
+      "version": "0.1.7"
     },
     "src/modules/free/security/security_headers/security_headers.py": {
-      "hash": "57f72e323dc73c7435f6a567ef0b570fefdae8113aaa23300ca3356cf1f790d7",
+      "hash": "b85c37f5050e674ca4320f73de056c7808f6ae8dc4afa58e0e99eea30c8f6d0d",
       "module": "security_headers",
-      "version": "0.1.3"
+      "version": "0.1.7"
     },
     "tests/modules/e2e/free/auth/core/test_core_e2e.py": {
       "hash": "ff92b6a76a47a9418beb59f18174b5da145350bdd34404afce82230e7cd4f841",
@@ -261,9 +261,9 @@
       "version": "0.1.9"
     },
     "tests/modules/e2e/free/essentials/middleware/test_middleware_e2e.py": {
-      "hash": "a891860021f62be65d6e213939695b9403944e7656c68cd9c20a5869236c808d",
+      "hash": "6d6a48a868f2c996c42b6e080ca49869dfb372485e59033a37a98f433513ac89",
       "module": "middleware",
-      "version": "0.1.20"
+      "version": "0.1.24"
     },
     "tests/modules/e2e/free/essentials/settings/test_settings_e2e.py": {
       "hash": "55eadb4dfbaf61c7fb07ecce3dbb5cf6a5c9c02ac93bb3d58f7a4d2bde73dadc",
@@ -276,34 +276,34 @@
       "version": "0.1.3"
     },
     "tests/modules/free/auth/core/test_auth_core_integration.py": {
-      "hash": "5d69f40250e7d538291bfe734da24b1ca09d074184a44624ef31745bb0b8070b",
+      "hash": "f899be8a46bcda60f630ad4af3f084be1838020a457f76248c7cae4864c3cc71",
       "module": "auth_core",
-      "version": "0.1.10"
+      "version": "0.1.14"
     },
     "tests/modules/free/auth/core/test_core_integration.py": {
-      "hash": "1bd24d4788271be90742d54c693662d61b3bed89e440c8225f9b6227f3823d99",
+      "hash": "718065251c148bf35728784bea79dbbb970ba502930f93d810c67bbd4f705629",
       "module": "auth_core",
-      "version": "0.1.10"
+      "version": "0.1.14"
     },
     "tests/modules/free/cache/redis/test_redis_integration.py": {
-      "hash": "89fc362be3321e4344aaed345feb3c00366d49f6b8722874bd041226463e3821",
+      "hash": "8e33851bcdfeaa03331df9412f3e49008930b0c5b26453008e1b972c9e798652",
       "module": "redis",
-      "version": "0.1.17"
+      "version": "0.1.23"
     },
     "tests/modules/free/essentials/deployment/test_deployment_integration.py": {
-      "hash": "85052ae353b1f6884b7d6182fe1eec3c5752d73eb1c8de2144300761b3b160c6",
+      "hash": "9bc3ea891bbf0ae81812eaa8fb0875517d4b4a9f0c9112c679a8b4b540862554",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "tests/modules/free/essentials/logging/test_logging_integration.py": {
-      "hash": "fdf38a65a7490cab65a3f4da08f53e03ea0efcc700a16e70b2ae0da7e95ad974",
+      "hash": "cf9f02cb5fd9f050cd1984be95e58db5641d3cc8030c7f7ad2e7ed969e882826",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "tests/modules/free/essentials/middleware/test_middleware_integration.py": {
-      "hash": "313e3c001b0954afeaa0bceeb07760f21f6e9dd6295fd916453ca6829a31c1fc",
+      "hash": "c5a7f5ce976d398dfa0236bb3ffca2f4e3eaf313bb922093b7d510ad113a8bcb",
       "module": "middleware",
-      "version": "0.1.20"
+      "version": "0.1.24"
     },
     "tests/modules/free/essentials/settings/test_settings_integration.py": {
       "hash": "2184edaf11769a56ab54fc2102e8637877d760e039e62ef024914eacf3c74fc7",

@@ -1,508 +1,194 @@
-# RapidKit Examples
+# Workspai Example Workspaces
 
-[![Part of RapidKit Platform](https://img.shields.io/badge/Part%20of-RapidKit%20Workspace%20Platform-0f172a?logo=github)](https://github.com/rapidkitlabs/rapidkit)
+Real, cloneable examples of
+[Workspace Intelligence](https://www.workspai.dev/docs) for software systems.
 
-Official example projects for RapidKit.
+Start from a raw workspace profile, create a supported project, or bring an
+existing project into the architecture through import or in-place adoption.
+Languages, frameworks, repositories, and AI tools stay yours; Workspai adds the
+shared model, evidence, governance, and agent grounding around them.
 
-This repository contains production-style reference implementations that accompany RapidKit tutorials and articles.
+Some runnable examples were originally generated with
+[RapidKit Core](https://github.com/rapidkitlabs/rapidkit-core) and retain their
+legacy metadata as compatibility input. Their current workspace interface and
+all new commands use [Workspai](https://github.com/rapidkitlabs/workspai).
 
-It is also the public discovery layer for Pro workspaces. Pro showcase pages live under [`pro-showcase`](pro-showcase), but paid source code, customer archives, and release evidence stay private in `rapidkit-examples-pro`.
+Validated runtime baseline: `workspai@0.43.1` and `rapidkit-core==0.5.5`.
+Each runnable project carries its own reproducible lockfiles and module
+registry; Workspace Intelligence remains the shared architecture across them.
 
-## Product Standard
+## Why Workspace Intelligence
 
-This repository follows the RapidKit + Workspai workspace product operating standard:
+Workspai is not another AI coding assistant, agent framework, or replacement
+for the tools your team already uses.
 
-- Free examples are cloneable and useful on their own.
-- Pro showcases are public, source-free, and honest about availability.
-- Catalog promotion happens only after a Workspai manifest is backed by a real example or release candidate.
-- Product planning is managed separately; this repository is the public publication surface, not a backlog.
+> One workspace. One truth. Humans and AI aligned.
 
-Machine-readable index: [`examples.json`](examples.json)
+It adds a shared, evidence-backed intelligence layer around your software
+system. Projects, dependencies, policies, changes, health evidence, and release
+decisions become one workspace model that developers, CI, IDEs, and AI agents
+can use together.
 
-Public Pro showcase: [`pro-showcase`](pro-showcase)
+You can keep your existing languages, frameworks, repositories, models, and AI
+tools. Workspai generates portable context and grounding surfaces such as
+`AGENTS.md`, skills, structured reports, and tool-specific instructions from
+the same verified workspace evidence. It complements Claude, Codex, Copilot,
+Cursor, and other consumers instead of competing with them.
 
-## Part of the RapidKit Ecosystem
-
-RapidKit Examples is the adoption layer of the platform.
-
-| Layer | Repository |
-|---|---|
-| Ecosystem Hub | [getrapidkit/rapidkit](https://github.com/rapidkitlabs/rapidkit) |
-| CLI | [getrapidkit/rapidkit-npm](https://github.com/rapidkitlabs/rapidkit-npm) |
-| IDE | [getrapidkit/rapidkit-vscode](https://github.com/rapidkitlabs/rapidkit-vscode) |
-| Core Engine | [getrapidkit/rapidkit-core](https://github.com/rapidkitlabs/rapidkit-core) |
-
-> **One-click start:** Install the [RapidKit VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode), open the **RapidKit Welcome** panel, and clone any example workspace directly into your environment — no CLI commands needed.
-
----
-
-## 🚀 Featured Examples
-
-### 1. Quickstart Workspace (⚡ Beginner)
-
-**Path:** [quickstart-workspace](quickstart-workspace)
-
-**Description:** Production-ready FastAPI in 5 minutes
-
-**Includes:**
-- `product-api` (FastAPI): Complete API with auth, database, caching, monitoring
-- JWT Authentication (register, login, refresh)
-- PostgreSQL with SQLAlchemy (async & sync)
-- Redis caching with connection pooling
-- CORS & Security Headers
-- Structured logging & Prometheus metrics
-- Docker & CI/CD templates
-
-**Modules:** `settings`, `auth_core`, `db_postgres`, `redis`, `cors`, `security_headers`, `logging`, `deployment`
-
-**Articles:**
-- Medium: [From Zero to Production FastAPI with RapidKit: Build a Real E-Commerce API](https://medium.com/@rapidkit/from-zero-to-production-fastapi-with-rapidkit-build-a-real-e-commerce-api-80390a34ffe3)
-- Dev.to: [Build a Production-Ready FastAPI E-Commerce API with RapidKit (Step-by-Step)](https://dev.to/rapidkit/build-a-production-ready-fastapi-e-commerce-api-with-rapidkit-step-by-step-llm)
-
----
-
-### 2. AI Agent Workspace (🤖 Intermediate)
-
-**Path:** [my-ai-workspace](my-ai-workspace)
-
-**Description:** Multi-provider AI assistant with FastAPI and NestJS
-
-**Includes:**
-- `ai-agent` (FastAPI): Multi-provider AI assistant (echo/template/OpenAI-ready)
-- `ai-agent-nest` (NestJS): Parity implementation with `ai_assistant` module
-- Streaming + caching endpoints
-- Health checks & support ticket workflow
-- Integrated tests and module status checks
-
-**Modules:** `ai_assistant`, `settings`, `logging`
-
-**Articles:**
-- Medium: [Build Your First AI Agent with RapidKit in 10 Minutes](https://rapidkit.medium.com/build-your-first-ai-agent-with-rapidkit-in-10-minutes-f38a6a12088d)
-- Dev.to: [Build Your First AI Agent with RapidKit in 10 Minutes](https://dev.to/rapidkit/build-your-first-ai-agent-with-rapidkit-in-10-minutes-3dj6)
-
----
-
-### 3. SaaS Starter Workspace (🏢 Advanced)
-
-**Path:** [saas-starter-workspace](saas-starter-workspace)
-
-**Description:** Complete multi-project SaaS backend foundation with FastAPI + NestJS + webhooks.
-
-**Includes:**
-- `saas-api` (FastAPI): Main API for auth, profiles, subscriptions, billing, teams
-- `saas-admin` (FastAPI): Admin backend for user moderation and metrics
-- `saas-nest` (NestJS): Framework parity implementation + shared module health routes
-- `saas-webhooks` (FastAPI): Stripe webhook intake, logs, replay, retry-oriented processing
-
-**Modules:** `settings`, `logging`, `db_postgres`, `redis`, `auth_core`, `oauth`, `session`, `users_core`, `users_profiles`, `stripe_payment`, `cart`, `inventory`, `security_headers`, `rate_limiting`, `celery`, `email`, `notifications`
-
-**Articles:**
-- Medium: [Building Production SaaS Architecture: Deep Dive into Multi-Service Implementation](https://rapidkit.medium.com/building-production-saas-architecture-deep-dive-into-multi-service-implementation-8a838f36e4ad)
-- Dev.to: [Build Production SaaS: Code Walkthrough (FastAPI + NestJS + Webhooks)](https://dev.to/rapidkit/build-production-saas-code-walkthrough-4c7c)
-
----
-
-## 💡 VS Code Extension (Recommended)
-
-**The fastest way to work with RapidKit workspaces.**
-
-### 🎯 Why Use the Extension?
-
-Skip manual cloning and setup. The [RapidKit VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode) provides a complete integrated development experience for RapidKit projects.
-
-### ✨ Key Features
-
-**1. One-Click Workspace Import**
-- **Clone from GitHub** — Paste any RapidKit workspace URL, clone instantly
-- **Import Downloaded Workspaces** — Drag & drop `.zip` files or browse local folders
-- **Welcome Page** — Visual gallery of all available example workspaces
-
-**2. Integrated Project Management**
-- **Run/Stop Services** — Start development servers from the sidebar
-- **View Logs** — Real-time log streaming in integrated terminal
-- **Health Checks** — Monitor module status with visual indicators
-- **Port Management** — Auto-detect and resolve port conflicts
-
-**3. Module Management**
-- **Install Modules** — GUI wizard for adding modules (auth, database, AI, etc.)
-- **Configure Settings** — Visual editors for module configurations
-- **Module Status** — See which modules are installed and their health
-
-**4. Development Tools**
-- **RapidKit Terminal** — Integrated terminal with command autocomplete
-- **Quick Actions** — Run migrations, tests, or custom scripts with one click
-- **Project Templates** — Scaffolding wizards for new projects
-- **Multi-Project Workspaces** — Manage multiple services simultaneously
-
-**5. Testing & Debugging**
-- **Run Tests** — Execute test suites from the sidebar
-- **Debug Configuration** — Pre-configured debug profiles
-- **Coverage Reports** — View test coverage inline
-
-### 📦 Installation
-
-**Option 1: From VS Code**
-1. Open VS Code
-2. Go to Extensions (`Cmd/Ctrl+Shift+X`)
-3. Search for "RapidKit"
-4. Click **Install**
-
-**Option 2: Command Line**
-```bash
-code --install-extension rapidkit.rapidkit-vscode
-```
-
-**Option 3: Direct Download**
-- Visit: https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode
-- Click "Install"
-
-### 🚀 Quick Start with Extension
-
-**Import This Repository:**
-
-1. Open VS Code
-2. Open Command Palette (`Cmd/Ctrl+Shift+P`)
-3. Type: **RapidKit: Import Workspace**
-4. Paste: `https://github.com/rapidkitlabs/rapidkit-examples.git`
-5. Select workspace (quickstart-workspace, my-ai-workspace, or saas-starter-workspace)
-6. Click **Import & Setup**
-
-**That's it!** The extension will:
-- Clone the repository
-- Install dependencies
-- Configure environment
-- Open the workspace
-- Show available services in the sidebar
-
-**Run a Project:**
-
-1. Open RapidKit sidebar (left panel)
-2. Expand "Projects"
-3. Click ▶️ next to any project (e.g., `product-api`)
-4. Extension starts the dev server automatically
-5. Click 🌐 to open in browser
-
-### 🎬 Example Workflow
-
-**Scenario: Run the SaaS Starter Workspace**
-
-```
-Command Palette → RapidKit: Import Workspace
-→ Paste: https://github.com/rapidkitlabs/rapidkit-examples.git
-→ Select: saas-starter-workspace
-→ Click: Import & Setup
-```
-
-**After import:**
-- Sidebar shows 4 projects: `saas-api`, `saas-admin`, `saas-nest`, `saas-webhooks`
-- Click ▶️ on `saas-api` → Dev server starts on port 8000
-- Click ▶️ on `saas-admin` → Starts on port 8001
-- Click 🌐 → Opens Swagger docs automatically
-- Click 📊 → View logs in integrated terminal
-
-**Need to add a module?**
-- Right-click project → **Install Module**
-- Select module (e.g., `stripe_payment`)
-- Extension installs and configures automatically
-- Service restarts with new module
-
-### 📱 Extension UI Overview
-
-**Sidebar Panels:**
-- **📦 Workspaces** — All imported workspaces
-- **🎯 Projects** — Services within active workspace
-- **🧩 Modules** — Installed modules with status indicators
-- **⚙️ Settings** — Quick access to configurations
-- **📝 Logs** — Real-time log viewer
-
-**Status Bar:**
-- **RapidKit CLI Version** — Click to check for updates
-- **Active Workspace** — Current workspace name
-- **Running Services** — Count of active dev servers
-
-### 🔧 Advanced Features
-
-**1. Workspace Health Check:**
-- Right-click workspace → **Run Health Check**
-- Extension validates Python, Poetry, dependencies, modules
-- Shows actionable fixes for any issues
-
-**2. Module Configuration:**
-- Click any module in sidebar
-- Visual editor for `config/{module}.toml` files
-- Autocomplete for configuration options
-
-**3. Custom Scripts:**
-- Define scripts in `pyproject.toml`:
-  ```toml
-  [tool.rapidkit.scripts]
-  seed-db = "python scripts/seed_database.py"
-  migrate = "alembic upgrade head"
-  ```
-- Run from Command Palette: **RapidKit: Run Script**
-
-**4. Multi-Workspace Support:**
-- Open multiple RapidKit workspaces side-by-side
-- Switch between workspaces in dropdown
-- Each workspace has independent service states
-
-### 🆚 Extension vs Manual Setup
-
-| Task | Manual | With Extension |
-|------|--------|----------------|
-| Clone workspace | 4 commands | 1 click |
-| Install dependencies | 3 commands per project | Automatic |
-| Start dev server | Terminal, type commands | Click ▶️ |
-| Check logs | Switch terminals | Integrated viewer |
-| Install module | CLI + config edits | GUI wizard |
-| Health check | `npx rapidkit doctor` | Right-click menu |
-| Port conflicts | Manual debugging | Auto-resolves |
-
-**Time saved per project: ~5-10 minutes**
-
-### 🐛 Troubleshooting
-
-**Extension not showing workspaces?**
-- Reload window: `Cmd/Ctrl+Shift+P` → **Reload Window**
-- Check output panel: **View → Output → RapidKit**
-
-**Project won't start?**
-- Right-click → **Run Health Check**
-- Install missing dependencies: Right-click → **Install Dependencies**
-
-**Module installation fails?**
-- Check logs in Output panel
-- Ensure virtual environment is activated
-- Try: Right-click project → **Rebuild Environment**
-
-### 📚 Learn More
-
-- **Extension Docs:** https://docs.getrapidkit.com/vscode
-- **Video Tutorial:** https://www.youtube.com/@rapidkit
-- **Report Issues:** https://github.com/rapidkit/vscode-extension/issues
-
----
-
-## ⚡ Quick Start (Manual Setup)
-
-### Quickstart Workspace (Beginner - 5 minutes)
-
-**Production-ready FastAPI with auth, database, caching:**
+## Start here
 
 ```bash
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
-cd rapidkit-examples/quickstart-workspace/product-api
+cd rapidkit-examples/quickstart-workspace
 
-# Start infrastructure
-docker-compose up -d postgres redis
-
-# Install & run
-cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev
+npx workspai workspace sync
+npx workspai workspace contract verify --strict --json
+npx workspai workspace model --json --write
 ```
 
-**Endpoints:**
-- 📚 API Docs: http://localhost:8000/docs
-- ❤️ Health: http://localhost:8000/health
-- 🔐 Auth: http://localhost:8000/api/health/module/auth-core
-- 💾 Database: http://localhost:8000/api/health/module/postgres
-- 🗄️ Redis: http://localhost:8000/api/health/module/redis
-- 📊 Metrics: http://localhost:8000/metrics
+`workspace sync` is idempotent. On a newly cloned machine it registers the
+workspace locally, discovers its projects, and refreshes the portable workspace
+contract.
 
----
+### Choose a learning path
 
-### AI Agent Workspace (Intermediate)
+| You want to... | Continue with... |
+| --- | --- |
+| Run the smallest complete example | [Quickstart Workspace](quickstart-workspace) |
+| Start from an empty language/runtime boundary | [Raw profile fixtures](#raw-profile-fixtures) |
+| Add an existing repository without changing its framework | [Import or adopt](WORKSPACE_ONBOARDING.md#add-projects-to-a-workspace) |
+| Understand changes, impact, and verification | [Workspace Intelligence chain](WORKSPACE_ONBOARDING.md#run-the-workspace-intelligence-chain) |
+| Ground Claude, Codex, Copilot, Cursor, or another agent | [Agent and IDE files](WORKSPACE_ONBOARDING.md#generate-files-for-ai-agents-and-ides) |
+| Add strict release checks | [CI and release](WORKSPACE_ONBOARDING.md#before-ci-or-release) |
 
-**FastAPI:**
+## Published workspaces
+
+| Workspace | Projects | Focus | Level |
+| --- | ---: | --- | --- |
+| [Quickstart](quickstart-workspace) | 2 | FastAPI, auth, PostgreSQL, Redis, observability | Beginner |
+| [AI Agent](my-ai-workspace) | 2 | FastAPI and NestJS agent implementations | Intermediate |
+| [SaaS Starter](saas-starter-workspace) | 4 | Multi-service SaaS APIs, admin, webhooks | Advanced |
+
+Machine-readable catalog: [examples.json](examples.json).
+
+Publication rules: [PUBLICATION_CONTRACT.md](PUBLICATION_CONTRACT.md).
+
+Complete clone, registry, import, adopt, and Workspace Intelligence workflow:
+[WORKSPACE_ONBOARDING.md](WORKSPACE_ONBOARDING.md).
+
+## Raw profile fixtures
+
+Every supported profile is published as an empty, CLI-generated workspace at
+the repository root so its foundation is visible and directly cloneable:
+
+| Profile | Raw workspace |
+| --- | --- |
+| `minimal` | [minimal-workspace](minimal-workspace) |
+| `java-only` | [java-only-workspace](java-only-workspace) |
+| `python-only` | [python-only-workspace](python-only-workspace) |
+| `node-only` | [node-only-workspace](node-only-workspace) |
+| `go-only` | [go-only-workspace](go-only-workspace) |
+| `dotnet-only` | [dotnet-only-workspace](dotnet-only-workspace) |
+| `polyglot` | [polyglot-workspace](polyglot-workspace) |
+| `enterprise` | [enterprise-workspace](enterprise-workspace) |
+
+They demonstrate profile and foundation contracts only. Application projects
+are intentionally kept in the real examples above, while the complete kit
+matrix is verified by CLI generator tests.
+
+Profile boundaries and publication rules: [PROFILE_WORKSPACES.md](PROFILE_WORKSPACES.md).
+
+## Workspace Intelligence
+
+```mermaid
+flowchart LR
+    INPUTS["Projects · Dependencies · Policies · Changes"] --> WI["Workspace Intelligence<br/>Model · Impact · Verify · Context"]
+    WI --> EVIDENCE["Evidence<br/>Reports · Contracts · Gates"]
+    WI --> AGENTS["Agent grounding<br/>AGENTS.md · Skills · Context"]
+    EVIDENCE --> CONSUMERS["Developers · CI · IDEs · AI agents"]
+    AGENTS --> CONSUMERS
+```
+
+Each published workspace includes:
+
+- `.workspai-workspace` as the canonical workspace marker
+- `.workspai/workspace.json` for workspace identity and profile
+- `.workspai/workspace.contract.json` as the portable project contract
+- `.workspai/policies.yml` and `.workspai/toolchain.lock` for governance
+- legacy `.rapidkit*` metadata required by the original Core-backed projects
+
+The legacy files are compatibility inputs, not the current public interface.
+Do not delete them until the example projects are regenerated by a compatible
+Workspai-owned kit. Machine-local reports, registry summaries, and absolute
+adoption records are intentionally ignored and regenerated after cloning.
+
+## Run an example
+
+### Quickstart
 
 ```bash
-git clone https://github.com/rapidkitlabs/rapidkit-examples.git
-cd rapidkit-examples/my-ai-workspace/ai-agent
+cd quickstart-workspace/product-api
 cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev
+npx workspai init
+npx workspai dev
 ```
 
-**NestJS:**
+### AI Agent
 
 ```bash
-cd rapidkit-examples/my-ai-workspace/ai-agent-nest
+cd my-ai-workspace/ai-agent
 cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev -p 8013
+npx workspai init
+npx workspai dev
 ```
 
-**Endpoints:**
-- 📚 Swagger UI: http://127.0.0.1:8000/docs (or auto-fallback port)
-- 🤖 AI Providers: `GET /ai/assistant/providers`
-- 💬 Completions: `POST /ai/assistant/completions`
-- 📡 Streaming: `POST /ai/assistant/stream`
-- 🎫 Support Ticket: `POST /support/ticket`
-
----
-
-### SaaS Starter Workspace (Advanced)
+NestJS variant:
 
 ```bash
-git clone https://github.com/rapidkitlabs/rapidkit-examples.git
-cd rapidkit-examples/saas-starter-workspace
-npx rapidkit doctor workspace
+cd my-ai-workspace/ai-agent-nest
+cp .env.example .env
+npx workspai init
+npx workspai dev -p 8013
 ```
 
-**Run each service:**
-
-```bash
-# Main SaaS API
-cd saas-api
-cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev
-
-# Admin API
-cd ../saas-admin
-cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev -p 8001
-
-# NestJS API
-cd ../saas-nest
-cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev -p 8002
-
-# Webhooks service
-cd ../saas-webhooks
-cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev -p 8003
-```
-
-**Key endpoints:**
-- `saas-api`: `/auth/register`, `/subscriptions/plans`, `/teams`
-- `saas-admin`: `/admin/users`, `/admin/subscriptions`, `/admin/health`
-- `saas-nest`: `/docs`, `/api/health/module/{module}`
-- `saas-webhooks`: `POST /api/webhooks/stripe`, `GET /api/webhooks/logs`, `POST /api/webhooks/replay/{event_id}`
-
-## 🔍 Workspace Health Check
-
-**Quickstart Workspace:**
-
-```bash
-cd quickstart-workspace
-npx rapidkit doctor workspace
-```
-
-**AI Agent Workspace:**
-
-```bash
-cd my-ai-workspace
-npx rapidkit doctor workspace
-```
-
-**SaaS Starter Workspace:**
+### SaaS Starter
 
 ```bash
 cd saas-starter-workspace
-npx rapidkit doctor workspace
+npx workspai doctor workspace
+npx workspai workspace run init
 ```
 
-**Checks:**
-- ✅ Python version (3.10+)
-- ✅ Poetry installation
-- ✅ RapidKit Core version
-- ✅ Virtual environment status
-- ✅ Project dependencies
-- ✅ Module configurations
+See each workspace README for service ports, infrastructure, endpoints, and
+module-specific setup.
 
-## 📁 Repository Layout
+## Pro showcases
 
-```text
-rapidkit-examples/
-├── README.md                    # This file
-├── examples.json                # Workspace metadata
-│
-├── quickstart-workspace/        # ⚡ Beginner (5 minutes)
-│   ├── README.md               # Workspace guide
-│   ├── pyproject.toml          # Workspace dependencies
-│   └── product-api/            # Production-ready API
-│       ├── README.md           # Project guide
-│       ├── src/
-│       │   ├── main.py         # FastAPI app
-│       │   ├── modules/        # RapidKit modules
-│       │   ├── routing/        # API routes
-│       │   └── health/         # Health probes
-│       ├── tests/              # Test suite
-│       ├── config/             # Module configs
-│       ├── docker-compose.yml  # Postgres + Redis
-│       └── Dockerfile          # Production image
-│
-├── my-ai-workspace/            # 🤖 Intermediate (10 minutes)
-    ├── README.md               # Workspace guide
-    ├── ai-agent/               # FastAPI AI assistant
-    │   ├── README.md
-    │   └── EXAMPLE_README.md   # Tutorial walkthrough
-    └── ai-agent-nest/          # NestJS implementation
-        └── README.md
-│
-└── saas-starter-workspace/     # 🏢 Advanced (15-20 minutes)
-    ├── README.md               # Workspace guide
-    ├── saas-api/               # Main SaaS API (FastAPI)
-    ├── saas-admin/             # Admin API (FastAPI)
-    ├── saas-nest/              # Framework comparison (NestJS)
-    └── saas-webhooks/          # Stripe webhook processor (FastAPI)
+[pro-showcase](pro-showcase) contains public product descriptions only. Paid
+source code, customer archives, entitlement logic, and release evidence remain
+private. Showcase directories are not presented as runnable workspaces.
+
+## Publication policy
+
+- Free examples must remain cloneable and useful without private dependencies.
+- Published commands must use the current `workspai` npm CLI.
+- Portable contracts may be committed; machine-local evidence may not.
+- Pro availability claims require a real release candidate or published product.
+- `examples.json`, workspace contracts, and directory contents must agree.
+
+Run the repository integrity check before publishing:
+
+```bash
+corepack npm run check
 ```
 
-## 📚 Documentation Structure
+## Ecosystem
 
-**Quickstart Workspace:**
-- [quickstart-workspace/README.md](quickstart-workspace/README.md) - Workspace setup & overview
-- [quickstart-workspace/product-api/README.md](quickstart-workspace/product-api/README.md) - Project guide & usage
-
-**AI Agent Workspace:**
-- [my-ai-workspace/README.md](my-ai-workspace/README.md) - Workspace-level setup
-- [my-ai-workspace/ai-agent/README.md](my-ai-workspace/ai-agent/README.md) - FastAPI run/test commands
-- [my-ai-workspace/ai-agent/EXAMPLE_README.md](my-ai-workspace/ai-agent/EXAMPLE_README.md) - Tutorial walkthrough
-- [my-ai-workspace/ai-agent-nest/README.md](my-ai-workspace/ai-agent-nest/README.md) - NestJS parity guide
-
-**SaaS Starter Workspace:**
-- [saas-starter-workspace/README.md](saas-starter-workspace/README.md) - Workspace setup & commands
-- [saas-starter-workspace/saas-api/README.md](saas-starter-workspace/saas-api/README.md) - Main SaaS API
-- [saas-starter-workspace/saas-admin/README.md](saas-starter-workspace/saas-admin/README.md) - Admin service
-- [saas-starter-workspace/saas-nest/README.md](saas-starter-workspace/saas-nest/README.md) - NestJS parity service
-- [saas-starter-workspace/saas-webhooks/README.md](saas-starter-workspace/saas-webhooks/README.md) - Webhooks processor
-
----
-
-## 🎓 Learn More
-
-**RapidKit Resources:**
-- 📦 **npm CLI:** https://www.npmjs.com/package/rapidkit
-- 🐍 **Python Core:** https://pypi.org/project/rapidkit-core/
-- 🧩 **VS Code Extension:** https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode
-- 🌐 **Website:** https://www.getrapidkit.com
-- 📖 **Documentation:** https://docs.getrapidkit.com
-
-**Tutorial Articles:**
-- Medium: https://rapidkit.medium.com
-- Dev.to: https://dev.to/rapidkit
-
----
-
-## 🚀 Coming Soon
-
-- **product-workspace** - Step-by-step tutorial (Article 6)
-- **ecommerce-workspace** - Multi-service architecture (Article 10)
-- **ddd-workspace** - DDD + CQRS patterns (Article 11)
-- **AI workspaces** - Advanced AI patterns (Articles 7-8)
-
----
-
-**Built with RapidKit** 🚀
+| Surface | Link |
+| --- | --- |
+| RapidKit Labs | [getrapidkit.com](https://getrapidkit.com) |
+| Workspai product | [workspai.com](https://workspai.com) |
+| Knowledge portal | [workspai.dev](https://workspai.dev) |
+| Workspai CLI | [rapidkitlabs/workspai](https://github.com/rapidkitlabs/workspai) |
+| VS Code extension | [rapidkitlabs/rapidkit-vscode](https://github.com/rapidkitlabs/rapidkit-vscode) |
+| RapidKit Core | [rapidkitlabs/rapidkit-core](https://github.com/rapidkitlabs/rapidkit-core) |

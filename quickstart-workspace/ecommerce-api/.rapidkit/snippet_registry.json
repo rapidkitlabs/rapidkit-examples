@@ -6,7 +6,7 @@
       "priority": 10,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:01:07.646198+00:00",
+      "last_attempt_at": "2026-07-12T17:34:37.728289+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -20,7 +20,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -58,7 +58,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -81,7 +81,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-17T07:01:07.646198+00:00"
+      "applied_at": "2026-07-12T17:31:10.131715+00:00"
     },
     "logging_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -89,7 +89,7 @@
       "priority": 10,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:01:07.653654+00:00",
+      "last_attempt_at": "2026-07-12T17:34:37.738016+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -103,7 +103,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -141,7 +141,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -172,7 +172,7 @@
       "priority": 10,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:01:07.659533+00:00",
+      "last_attempt_at": "2026-07-12T17:34:37.745507+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -186,7 +186,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -224,7 +224,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -255,7 +255,7 @@
       "priority": 10,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:01:07.664974+00:00",
+      "last_attempt_at": "2026-07-12T17:34:37.755321+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -269,7 +269,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -307,7 +307,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -338,7 +338,7 @@
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:01:07.966403+00:00",
+      "last_attempt_at": "2026-07-12T17:34:37.759687+00:00",
       "template": "logging_fields.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/standard",
@@ -353,7 +353,7 @@
           ],
           "async_queue": true,
           "file_path": "logs/app.log",
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "correlation_header": "X-Request-ID",
           "healthcheck_enabled": true,
@@ -375,7 +375,7 @@
       "priority": 5,
       "file": "src/modules/free/essentials/settings/settings.py",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:11.877180+00:00",
+      "last_attempt_at": "2026-07-12T17:34:33.407264+00:00",
       "template": "settings_fields.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/standard",
@@ -406,7 +406,7 @@
       "priority": 8,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:11.889098+00:00",
+      "last_attempt_at": "2026-07-12T17:34:33.411425+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/standard",
@@ -427,7 +427,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-17T07:03:11.889098+00:00"
+      "applied_at": "2026-07-12T17:31:06.135708+00:00"
     },
     "db_postgres_env_defaults::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -435,7 +435,7 @@
       "priority": 8,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:11.891769+00:00",
+      "last_attempt_at": "2026-07-12T17:34:33.415482+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/standard",
@@ -464,7 +464,7 @@
       "priority": 8,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:11.893963+00:00",
+      "last_attempt_at": "2026-07-12T17:34:33.418460+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/standard",
@@ -493,7 +493,7 @@
       "priority": 8,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:11.896090+00:00",
+      "last_attempt_at": "2026-07-12T17:34:33.421247+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/standard",
@@ -522,7 +522,7 @@
       "priority": 10,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:36.532034+00:00",
+      "last_attempt_at": "2026-07-12T17:34:31.201708+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/standard",
@@ -545,7 +545,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-17T07:03:36.532034+00:00"
+      "applied_at": "2026-07-12T17:31:04.076906+00:00"
     },
     "auth_core_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -553,7 +553,7 @@
       "priority": 10,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:36.534793+00:00",
+      "last_attempt_at": "2026-07-12T17:34:31.205260+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/standard",
@@ -584,7 +584,7 @@
       "priority": 10,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:36.537602+00:00",
+      "last_attempt_at": "2026-07-12T17:34:31.208903+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/standard",
@@ -615,7 +615,7 @@
       "priority": 10,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:36.540277+00:00",
+      "last_attempt_at": "2026-07-12T17:34:31.212481+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/standard",
@@ -646,7 +646,7 @@
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:36.787812+00:00",
+      "last_attempt_at": "2026-07-12T17:34:31.224302+00:00",
       "template": "settings_fields.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/standard",
@@ -685,7 +685,7 @@
       "priority": 5,
       "file": "src/README.md",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:03:36.875460+00:00",
+      "last_attempt_at": "2026-07-12T17:34:31.306692+00:00",
       "template": "core.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/standard",
@@ -697,7 +697,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-17T07:03:36.875460+00:00"
+      "applied_at": "2026-07-12T17:34:31.306692+00:00"
     },
     "redis_env::.env": {
       "anchor": "# <<<inject:module-env>>>",
@@ -705,7 +705,7 @@
       "priority": 10,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:04:22.812298+00:00",
+      "last_attempt_at": "2026-07-12T17:34:41.869692+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/standard",
@@ -778,7 +778,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-17T07:04:22.812298+00:00"
+      "applied_at": "2026-07-12T17:31:14.322786+00:00"
     },
     "redis_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -786,7 +786,7 @@
       "priority": 10,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:04:22.818043+00:00",
+      "last_attempt_at": "2026-07-12T17:34:41.880200+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/standard",
@@ -867,7 +867,7 @@
       "priority": 10,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:04:22.823980+00:00",
+      "last_attempt_at": "2026-07-12T17:34:41.890507+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/standard",
@@ -948,7 +948,7 @@
       "priority": 10,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:04:22.829019+00:00",
+      "last_attempt_at": "2026-07-12T17:34:41.900695+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/standard",
@@ -1029,7 +1029,7 @@
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:04:23.124012+00:00",
+      "last_attempt_at": "2026-07-12T17:34:41.918748+00:00",
       "template": "redis_fields.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/standard",
@@ -1064,7 +1064,7 @@
       "priority": 5,
       "file": "src/README.md",
       "status": "applied",
-      "last_attempt_at": "2026-02-17T07:04:23.167463+00:00",
+      "last_attempt_at": "2026-07-12T17:34:41.926492+00:00",
       "template": "redis.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/standard",
@@ -1075,15 +1075,15 @@
         "additionalProperties": true,
         "required": []
       },
-      "applied_at": "2026-02-17T07:04:23.167463+00:00"
+      "applied_at": "2026-07-12T17:31:14.433475+00:00"
     },
     "security_headers_quickstart::README.md": {
       "anchor": "<!-- <<<inject:module-snippet>>> -->",
       "version": "1.0.0",
       "priority": 10,
       "file": "src/README.md",
-      "status": "failed",
-      "last_attempt_at": "2026-02-17T07:04:56.660225+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:44.023399+00:00",
       "template": "security_headers.snippet.j2",
       "module_slug": "free/security/security_headers",
       "profile": "fastapi/standard",
@@ -1103,8 +1103,25 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-17T07:04:43.941831+00:00",
-      "last_error": "already present in README.md"
+      "applied_at": "2026-02-17T07:04:43.941831+00:00"
+    },
+    "middleware_correlation_factory::middleware.py": {
+      "anchor": "# <<<inject:middleware-factories>>>",
+      "version": "0.1.0",
+      "priority": 20,
+      "file": "src/modules/free/essentials/middleware/middleware.py",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:39.751259+00:00",
+      "template": "middleware.snippet.j2",
+      "module_slug": "free/essentials/middleware",
+      "profile": "fastapi/standard",
+      "target": "src/modules/free/essentials/middleware/middleware.py",
+      "patch_mode": "ast_py",
+      "context": {
+        "request_header": "X-Request-ID",
+        "response_header": "X-Request-ID"
+      },
+      "applied_at": "2026-07-12T17:31:12.370932+00:00"
     }
   }
 }

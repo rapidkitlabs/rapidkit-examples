@@ -35,13 +35,13 @@ setup: ## Install dependencies and prepare tooling
 dev: ## Run the application in development mode
 > @echo "[dev] Starting development server"
 
-> $(POETRY) run uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
+> $(POETRY) run uvicorn src.main:app --reload --host 0.0.0.0 --port 8003
 
 
 start: ## Run the application with production settings
 > @echo "[start] Starting production server"
 
-> $(POETRY) run uvicorn src.main:app --host 0.0.0.0 --port 8000
+> $(POETRY) run uvicorn src.main:app --host 0.0.0.0 --port 8003
 
 
 lint: ## Run static analysis checks
@@ -106,4 +106,3 @@ docker-logs: ## Tail logs from local services
 
 docker-logs-prod: ## Tail logs from production-like services
 > docker compose -f $(COMPOSE_BASE) -f $(COMPOSE_PRODUCTION) --profile production logs -f
-

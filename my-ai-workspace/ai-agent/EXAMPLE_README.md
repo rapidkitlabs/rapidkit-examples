@@ -16,19 +16,18 @@ Companion document for the published tutorial:
 ## Build Flow (as in the article)
 
 ```bash
-npx rapidkit my-ai-workspace
+npx workspai my-ai-workspace
 cd my-ai-workspace
-rapidkit create project fastapi.standard ai-agent
+npx workspai create project fastapi.standard ai-agent
 cd ai-agent
-rapidkit init
-rapidkit add module ai_assistant
+npx workspai init
+npx workspai add module ai_assistant
 ```
 
 Then configure and run:
 
 ```bash
-source .rapidkit/activate
-rapidkit dev
+npx workspai dev
 ```
 
 ## API Smoke Checks
@@ -47,7 +46,7 @@ curl -X POST "http://127.0.0.1:8000/support/ticket?message=My%20payment%20failed
 
 ```bash
 export OPENAI_API_KEY="sk-..."
-rapidkit dev
+npx workspai dev
 ```
 
 When `OPENAI_API_KEY` is not set, the app falls back to local providers so tutorial flows still work.
@@ -56,7 +55,7 @@ When `OPENAI_API_KEY` is not set, the app falls back to local providers so tutor
 
 ```bash
 poetry run pytest tests/ -q
-rapidkit modules status
+npx workspai modules status
 ```
 
 Latest local result in this workspace:

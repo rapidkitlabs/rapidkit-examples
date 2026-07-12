@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { OauthModule } from "../../../../../../src/modules/free/auth/oauth/oauth.module";
+import { OauthModule } from "@modules/free/auth/oauth/oauth.module";
 
 describe("Oauth NestJS E2E", () => {
   it("compiles the module", async () => {

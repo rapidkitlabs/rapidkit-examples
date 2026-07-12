@@ -39,7 +39,7 @@ else:
 
 
 _VENDOR_MODULE = "settings"
-_VENDOR_VERSION = "0.1.41"
+_VENDOR_VERSION = "0.1.45"
 _VENDOR_RELATIVE_PATH = "src/modules/free/essentials/settings/settings.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _VENDOR_CACHE_PREFIX = "rapidkit_vendor_"
@@ -134,6 +134,202 @@ class Settings(getattr(_vendor, "Settings")):
 
     # <<<inject:settings-fields>>>
 
+
+    # <<<inject:settings-fields:rate_limiting_settings_fields:start>>>
+
+    # Rate Limiting
+    if "RATE_LIMIT_ENABLED" in locals():
+        RATE_LIMIT_ENABLED = Field(
+            default=True,
+            description="Enable or disable the rate limiter globally.",
+        )
+    else:
+        RATE_LIMIT_ENABLED: bool = Field(
+            default=True,
+            description="Enable or disable the rate limiter globally.",
+        )
+    if "RATE_LIMIT_BACKEND" in locals():
+        RATE_LIMIT_BACKEND = Field(
+            default="memory",
+            description="Selected rate limit backend (memory or redis).",
+        )
+    else:
+        RATE_LIMIT_BACKEND: str = Field(
+            default="memory",
+            description="Selected rate limit backend (memory or redis).",
+        )
+    if "RATE_LIMIT_REDIS_URL" in locals():
+        RATE_LIMIT_REDIS_URL = Field(
+            default="redis://localhost:6379/0",
+            description="Redis connection URL when RATE_LIMIT_BACKEND=redis.",
+        )
+    else:
+        RATE_LIMIT_REDIS_URL: Optional[str] = Field(
+            default="redis://localhost:6379/0",
+            description="Redis connection URL when RATE_LIMIT_BACKEND=redis.",
+        )
+    if "RATE_LIMIT_REDIS_PREFIX" in locals():
+        RATE_LIMIT_REDIS_PREFIX = Field(
+            default="rate-limit",
+            description="Key prefix applied to rate limit buckets in Redis.",
+        )
+    else:
+        RATE_LIMIT_REDIS_PREFIX: str = Field(
+            default="rate-limit",
+            description="Key prefix applied to rate limit buckets in Redis.",
+        )
+    if "RATE_LIMIT_TRUST_FORWARDED_FOR" in locals():
+        RATE_LIMIT_TRUST_FORWARDED_FOR = Field(
+            default=False,
+            description="Trust X-Forwarded-For headers for identity extraction.",
+        )
+    else:
+        RATE_LIMIT_TRUST_FORWARDED_FOR: bool = Field(
+            default=False,
+            description="Trust X-Forwarded-For headers for identity extraction.",
+        )
+    if "RATE_LIMIT_FORWARDED_FOR_HEADER" in locals():
+        RATE_LIMIT_FORWARDED_FOR_HEADER = Field(
+            default="X-Forwarded-For",
+            description="Header evaluated when trust_forwarded_for is enabled.",
+        )
+    else:
+        RATE_LIMIT_FORWARDED_FOR_HEADER: str = Field(
+            default="X-Forwarded-For",
+            description="Header evaluated when trust_forwarded_for is enabled.",
+        )
+    if "RATE_LIMIT_IDENTITY_HEADER" in locals():
+        RATE_LIMIT_IDENTITY_HEADER = Field(
+            default="X-RateLimit-Identity",
+            description="Header used to derive per-identity buckets.",
+        )
+    else:
+        RATE_LIMIT_IDENTITY_HEADER: Optional[str] = Field(
+            default="X-RateLimit-Identity",
+            description="Header used to derive per-identity buckets.",
+        )
+    if "RATE_LIMIT_DEFAULT_RULE_NAME" in locals():
+        RATE_LIMIT_DEFAULT_RULE_NAME = Field(
+            default="default",
+            description="Name assigned to the default rate limit rule.",
+        )
+    else:
+        RATE_LIMIT_DEFAULT_RULE_NAME: str = Field(
+            default="default",
+            description="Name assigned to the default rate limit rule.",
+        )
+    if "RATE_LIMIT_DEFAULT_LIMIT" in locals():
+        RATE_LIMIT_DEFAULT_LIMIT = Field(
+            default=120,
+            description="Default request allowance per window.",
+        )
+    else:
+        RATE_LIMIT_DEFAULT_LIMIT: int = Field(
+            default=120,
+            description="Default request allowance per window.",
+        )
+    if "RATE_LIMIT_DEFAULT_WINDOW" in locals():
+        RATE_LIMIT_DEFAULT_WINDOW = Field(
+            default=60,
+            description="Default rate limit window in seconds.",
+        )
+    else:
+        RATE_LIMIT_DEFAULT_WINDOW: int = Field(
+            default=60,
+            description="Default rate limit window in seconds.",
+        )
+    if "RATE_LIMIT_DEFAULT_SCOPE" in locals():
+        RATE_LIMIT_DEFAULT_SCOPE = Field(
+            default="identity",
+            description="Default scope for new rate limit rules.",
+        )
+    else:
+        RATE_LIMIT_DEFAULT_SCOPE: str = Field(
+            default="identity",
+            description="Default scope for new rate limit rules.",
+        )
+    if "RATE_LIMIT_DEFAULT_PRIORITY" in locals():
+        RATE_LIMIT_DEFAULT_PRIORITY = Field(
+            default=100,
+            description="Priority applied to the default rule when sorting.",
+        )
+    else:
+        RATE_LIMIT_DEFAULT_PRIORITY: int = Field(
+            default=100,
+            description="Priority applied to the default rule when sorting.",
+        )
+    if "RATE_LIMIT_DEFAULT_BLOCK_SECONDS" in locals():
+        RATE_LIMIT_DEFAULT_BLOCK_SECONDS = Field(
+            default=None,
+            description="Optional block duration applied when limits are exceeded.",
+        )
+    else:
+        RATE_LIMIT_DEFAULT_BLOCK_SECONDS: Optional[int] = Field(
+            default=None,
+            description="Optional block duration applied when limits are exceeded.",
+        )
+    if "RATE_LIMIT_HEADER_LIMIT" in locals():
+        RATE_LIMIT_HEADER_LIMIT = Field(
+            default="X-RateLimit-Limit",
+            description="Header name for communicating total request limit.",
+        )
+    else:
+        RATE_LIMIT_HEADER_LIMIT: str = Field(
+            default="X-RateLimit-Limit",
+            description="Header name for communicating total request limit.",
+        )
+    if "RATE_LIMIT_HEADER_REMAINING" in locals():
+        RATE_LIMIT_HEADER_REMAINING = Field(
+            default="X-RateLimit-Remaining",
+            description="Header name for communicating remaining quota.",
+        )
+    else:
+        RATE_LIMIT_HEADER_REMAINING: str = Field(
+            default="X-RateLimit-Remaining",
+            description="Header name for communicating remaining quota.",
+        )
+    if "RATE_LIMIT_HEADER_RESET" in locals():
+        RATE_LIMIT_HEADER_RESET = Field(
+            default="X-RateLimit-Reset",
+            description="Header name for communicating reset timestamps.",
+        )
+    else:
+        RATE_LIMIT_HEADER_RESET: str = Field(
+            default="X-RateLimit-Reset",
+            description="Header name for communicating reset timestamps.",
+        )
+    if "RATE_LIMIT_HEADER_RETRY_AFTER" in locals():
+        RATE_LIMIT_HEADER_RETRY_AFTER = Field(
+            default="Retry-After",
+            description="Header name for communicating retry-after durations.",
+        )
+    else:
+        RATE_LIMIT_HEADER_RETRY_AFTER: str = Field(
+            default="Retry-After",
+            description="Header name for communicating retry-after durations.",
+        )
+    if "RATE_LIMIT_HEADER_RULE" in locals():
+        RATE_LIMIT_HEADER_RULE = Field(
+            default="X-RateLimit-Rule",
+            description="Header name for communicating the matched rule.",
+        )
+    else:
+        RATE_LIMIT_HEADER_RULE: str = Field(
+            default="X-RateLimit-Rule",
+            description="Header name for communicating the matched rule.",
+        )
+    if "RATE_LIMIT_RULES_JSON" in locals():
+        RATE_LIMIT_RULES_JSON = Field(
+            default="",
+            description="JSON payload containing additional rate limit rules.",
+        )
+    else:
+        RATE_LIMIT_RULES_JSON: str = Field(
+            default="",
+            description="JSON payload containing additional rate limit rules.",
+        )
+
+    # <<<inject:settings-fields:rate_limiting_settings_fields:end>>>
     # <<<inject:settings-fields:users_core_settings_fields:start>>>
 
     try:

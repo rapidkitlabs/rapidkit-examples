@@ -96,9 +96,9 @@
       "version": "0.1.1"
     },
     "src/modules/free/auth/api_keys/api-keys.service.ts": {
-      "hash": "07bc00cfbb0f41a310fb1af7bc7e9f4b92f540d7e8fa99de0f969514ca29c594",
+      "hash": "bc08606eccac6833570face330dc6c1017541543ed60f8667ea76659c0617b27",
       "module": "api_keys",
-      "version": "0.1.1"
+      "version": "0.1.5"
     },
     "src/modules/free/essentials/deployment/deployment.configuration.ts": {
       "hash": "744e2ad6e7c12d6abb79bf0b27feb0931fad8af684a1dfd3daecf13c74cb438c",
@@ -116,9 +116,9 @@
       "version": "0.1.10"
     },
     "src/modules/free/essentials/deployment/deployment.service.ts": {
-      "hash": "d0a09a7f97289aafb97aad52535217387c0fb65f33cb17d954d8b82d5634b240",
+      "hash": "0ef12cd7a437799c3ae220815ecea433026599d5e2109d502cb239aa7795c443",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/logging/configuration.ts": {
       "hash": "34857447bd365a58b6813885af1b79075e5296fad850951cebd7f8c32036a8b5",
@@ -146,9 +146,9 @@
       "version": "0.1.9"
     },
     "src/modules/free/essentials/logging/logging.service.ts": {
-      "hash": "ae1ecbfb9120172a3c61b767739b9b600677631ecab5371fc07c1c8066ee1d03",
+      "hash": "b6b1a102db9707bf631430baf0eadf7548d3f00afa3fe524a477b28eb885d04f",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/logging/validation.ts": {
       "hash": "1ae4efea61c6ad6c10adefea4fe015e243256ca2f7c82cb1cbe1c671e3f2bd9d",
@@ -171,9 +171,9 @@
       "version": "0.1.20"
     },
     "src/modules/free/essentials/middleware/service.ts": {
-      "hash": "9b3b1522435a0b66a085e11303ea4bf2a79b75848893f3e26ad0a8d6777efc42",
+      "hash": "ca446d53811cdf3bce5696b0b74c5d2ec6c1b79ccdc0d9ad0f9c7e0808349b12",
       "module": "middleware",
-      "version": "0.1.20"
+      "version": "0.1.24"
     },
     "src/modules/free/essentials/settings/configuration.ts": {
       "hash": "aa9268fc9cd6935e1fdb6f071f8752d26a2d40175cbe7fbd6db7220b26676425",
@@ -211,29 +211,29 @@
       "version": "0.1.1"
     },
     "tests/modules/e2e/free/ai/ai_assistant/ai_assistant.e2e-spec.ts": {
-      "hash": "6a8f19195ee92fdfd5d2edda0c063e7d25996214458fa7343d8bdd1b9733fc5e",
+      "hash": "e6ef5f3b94c8e2e95a0c4a2fe757eee905e34727e57ca6b2029e13c0ca97185c",
       "module": "ai_assistant",
-      "version": "0.1.11"
+      "version": "0.1.20"
     },
     "tests/modules/e2e/free/auth/api_keys/api_keys.e2e-spec.ts": {
-      "hash": "027f865af7621daad6deb37b5bff6daa65fbc78de10506dfd1d2e1560fb32c02",
+      "hash": "29f3ec13d937fe8a2d39a6a4e84647a4c74f9cb56c0e60e3b96ed76f78a964f1",
       "module": "api_keys",
-      "version": "0.1.1"
+      "version": "0.1.5"
     },
     "tests/modules/e2e/free/essentials/deployment/deployment.e2e-spec.ts": {
-      "hash": "d85f055917eeb6b92178bb61fd93037b33ba6bd3d3d201a194dfd088d8191029",
+      "hash": "478a50cd40e033f0f32473389fb7287768a7cdd9212ef04c98d1638d1a782cdb",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "tests/modules/e2e/free/essentials/logging/logging.e2e-spec.ts": {
-      "hash": "3db4bcfc0910bf86b8109d19bbe9ccaab2bd2617405f367755862358ad088d1a",
+      "hash": "450ee17827c06aa048949eda3bfa4420dca0ed36051ad47ec11317d9c3fec202",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "tests/modules/e2e/free/essentials/settings/settings.e2e-spec.ts": {
-      "hash": "385b8302649c0d79ec53b98db6668ebacee2b6c468e8ec9bb177eee8a663da1f",
+      "hash": "57832b2187eb645b2f7953d5a04f920c6198b21d85ea03b45ec584c849930312",
       "module": "settings",
-      "version": "0.1.41"
+      "version": "0.1.45"
     },
     "tests/modules/integration/essentials/deployment/deployment.integration.spec.ts": {
       "hash": "bf2129cf281e114f6b7b658d1e1e639e16cd0e70f824f33f49a14b6a934c2495",

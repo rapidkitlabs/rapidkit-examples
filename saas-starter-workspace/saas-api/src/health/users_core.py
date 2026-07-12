@@ -11,7 +11,7 @@ from types import ModuleType
 from typing import Any, Optional
 
 _VENDOR_MODULE = "users_core"
-_VENDOR_VERSION = "0.1.9"
+_VENDOR_VERSION = "0.1.13"
 _VENDOR_RELATIVE_PATH = "src/health/users_core.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_users_core"

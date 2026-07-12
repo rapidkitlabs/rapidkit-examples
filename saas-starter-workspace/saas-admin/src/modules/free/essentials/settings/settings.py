@@ -39,7 +39,7 @@ else:
 
 
 _VENDOR_MODULE = "settings"
-_VENDOR_VERSION = "0.1.41"
+_VENDOR_VERSION = "0.1.45"
 _VENDOR_RELATIVE_PATH = "src/modules/free/essentials/settings/settings.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _VENDOR_CACHE_PREFIX = "rapidkit_vendor_"

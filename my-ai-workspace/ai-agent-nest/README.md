@@ -2,6 +2,8 @@
 
 NestJS parity example for RapidKit `ai_assistant`.
 
+**Part of [my-ai-workspace](../README.md).**
+
 This project includes:
 
 - `ai_assistant` module routes under `/ai/assistant/*`
@@ -18,9 +20,8 @@ This project includes:
 ## Run
 
 ```bash
-source .rapidkit/activate
-rapidkit init
-rapidkit dev -p 8013
+npx workspai init
+npx workspai dev -p 8013
 ```
 
 Alternative:
@@ -32,7 +33,7 @@ PORT=8013 npm run start:dev
 ## Optional OpenAI provider
 
 ```bash
-OPENAI_API_KEY=your_key rapidkit dev -p 8013
+OPENAI_API_KEY=your_key npx workspai dev -p 8013
 ```
 
 When `OPENAI_API_KEY` is set, `openai` is added to provider list.

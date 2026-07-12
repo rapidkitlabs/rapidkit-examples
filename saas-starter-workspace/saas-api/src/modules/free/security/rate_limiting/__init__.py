@@ -10,7 +10,7 @@ from pathlib import Path
 from types import ModuleType
 
 _VENDOR_MODULE = "rate_limiting"
-_VENDOR_VERSION = "0.1.9"
+_VENDOR_VERSION = "0.1.15"
 _VENDOR_RELATIVE_PATH = "src/modules/free/security/rate_limiting/rate_limiting.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_rate_limiting"

@@ -59,7 +59,7 @@ def build_plan(assets: Iterable[DeploymentAsset] | None = None) -> DeploymentPla
     materialised = list(assets or _default_assets())
     return DeploymentPlan(
         module="deployment",
-        version="0.1.10",
+        version="0.1.13",
         assets=materialised,
     )
 

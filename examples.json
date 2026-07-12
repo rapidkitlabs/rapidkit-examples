@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "schemaVersion": "rapidkit.examples-index.v1",
-    "version": "1.0.0",
-    "lastUpdated": "2026-02-16T00:00:00Z",
+    "schemaVersion": "workspai.examples-index.v1",
+    "version": "1.1.0",
+    "lastUpdated": "2026-07-12T00:00:00Z",
     "repository": "https://github.com/rapidkitlabs/rapidkit-examples",
     "publicationPolicy": {
         "repositoryRole": "public_cloneable_examples_and_showcases",
@@ -53,7 +53,7 @@
             ],
             "featured": true,
             "difficulty": "intermediate",
-            "lastModified": "2026-02-17T00:00:00Z",
+            "lastModified": "2026-07-12T00:00:00Z",
             "tutorialLinks": [
                 {
                     "title": "Build Your First AI Agent with RapidKit",
@@ -121,20 +121,18 @@
             "requirements": {
                 "python": ">=3.10",
                 "node": ">=20",
-                "rapidkit": ">=0.27.0"
+                "workspai": ">=0.43.1"
             },
             "quickStart": {
                 "fastapi": [
                     "cd my-ai-workspace/ai-agent",
-                    "source .rapidkit/activate",
-                    "rapidkit init",
-                    "rapidkit dev"
+                    "npx workspai init",
+                    "npx workspai dev"
                 ],
                 "nestjs": [
                     "cd my-ai-workspace/ai-agent-nest",
-                    "source .rapidkit/activate",
-                    "rapidkit init",
-                    "rapidkit dev -p 8013"
+                    "npx workspai init",
+                    "npx workspai dev -p 8013"
                 ]
             }
         },
@@ -157,7 +155,7 @@
             ],
             "featured": true,
             "difficulty": "beginner",
-            "lastModified": "2026-02-14T00:00:00Z",
+            "lastModified": "2026-07-12T00:00:00Z",
             "tutorialLinks": [
                 {
                     "title": "From Zero to Production API in 5 Minutes",
@@ -232,16 +230,15 @@
             ],
             "requirements": {
                 "python": ">=3.10",
-                "rapidkit": ">=0.27.0",
+                "workspai": ">=0.43.1",
                 "docker": "recommended"
             },
             "quickStart": {
                 "fastapi": [
                     "cd quickstart-workspace/product-api",
                     "docker-compose up -d postgres redis",
-                    "source .rapidkit/activate",
-                    "rapidkit init",
-                    "rapidkit dev"
+                    "npx workspai init",
+                    "npx workspai dev"
                 ]
             }
         },
@@ -264,7 +261,7 @@
             ],
             "featured": true,
             "difficulty": "advanced",
-            "lastModified": "2026-02-16T00:00:00Z",
+            "lastModified": "2026-07-12T00:00:00Z",
             "tutorialLinks": [],
             "projects": [
                 {
@@ -363,39 +360,117 @@
             "requirements": {
                 "python": ">=3.10",
                 "node": ">=20",
-                "rapidkit": ">=0.9.0",
+                "workspai": ">=0.43.1",
                 "docker": "recommended"
             },
             "quickStart": {
                 "workspace": [
                     "cd saas-starter-workspace",
-                    "npx rapidkit doctor --workspace"
+                    "npx workspai doctor workspace"
                 ],
                 "saas-api": [
                     "cd saas-starter-workspace/saas-api",
-                    "source .rapidkit/activate",
-                    "rapidkit init",
-                    "rapidkit dev"
+                    "npx workspai init",
+                    "npx workspai dev"
                 ],
                 "saas-admin": [
                     "cd saas-starter-workspace/saas-admin",
-                    "source .rapidkit/activate",
-                    "rapidkit init",
-                    "rapidkit dev -p 8001"
+                    "npx workspai init",
+                    "npx workspai dev -p 8001"
                 ],
                 "saas-nest": [
                     "cd saas-starter-workspace/saas-nest",
-                    "source .rapidkit/activate",
-                    "rapidkit init",
-                    "rapidkit dev -p 8002"
+                    "npx workspai init",
+                    "npx workspai dev -p 8002"
                 ],
                 "saas-webhooks": [
                     "cd saas-starter-workspace/saas-webhooks",
-                    "source .rapidkit/activate",
-                    "rapidkit init",
-                    "rapidkit dev -p 8003"
+                    "npx workspai init",
+                    "npx workspai dev -p 8003"
                 ]
             }
+        }
+    ],
+    "profileWorkspaces": [
+        {
+            "id": "minimal",
+            "name": "minimal-workspace",
+            "profile": "minimal",
+            "path": "minimal-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "not-required",
+            "lifecycleStatus": "published"
+        },
+        {
+            "id": "java-only",
+            "name": "java-only-workspace",
+            "profile": "java-only",
+            "path": "java-only-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "not-required",
+            "lifecycleStatus": "published"
+        },
+        {
+            "id": "python-only",
+            "name": "python-only-workspace",
+            "profile": "python-only",
+            "path": "python-only-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "skipped",
+            "lifecycleStatus": "published"
+        },
+        {
+            "id": "node-only",
+            "name": "node-only-workspace",
+            "profile": "node-only",
+            "path": "node-only-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "not-required",
+            "lifecycleStatus": "published"
+        },
+        {
+            "id": "go-only",
+            "name": "go-only-workspace",
+            "profile": "go-only",
+            "path": "go-only-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "not-required",
+            "lifecycleStatus": "published"
+        },
+        {
+            "id": "dotnet-only",
+            "name": "dotnet-only-workspace",
+            "profile": "dotnet-only",
+            "path": "dotnet-only-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "not-required",
+            "lifecycleStatus": "published"
+        },
+        {
+            "id": "polyglot",
+            "name": "polyglot-workspace",
+            "profile": "polyglot",
+            "path": "polyglot-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "skipped",
+            "lifecycleStatus": "published"
+        },
+        {
+            "id": "enterprise",
+            "name": "enterprise-workspace",
+            "profile": "enterprise",
+            "path": "enterprise-workspace",
+            "kind": "raw-profile-fixture",
+            "projects": [],
+            "pythonEngine": "skipped",
+            "lifecycleStatus": "published"
         }
     ]
 }

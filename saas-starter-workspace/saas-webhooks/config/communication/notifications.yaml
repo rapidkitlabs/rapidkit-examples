@@ -11,7 +11,7 @@ notifications:
     port: 587
     username: null
     password: null
-    from_email: "noreply@rapidkit.top"
+    from_email: "noreply@getrapidkit.com"
     from_name: "RapidKit Notifications"
     reply_to: null
     use_tls: true

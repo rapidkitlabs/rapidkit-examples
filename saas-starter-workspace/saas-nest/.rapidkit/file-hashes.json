@@ -38,7 +38,7 @@
     "src/health/__init__.py": {
       "hash": "23d1cb67aa2c34de63e89ea5a679af5c885246c110763152a13af3e96a709488",
       "module": "users_core",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "src/health/auth-core.health.ts": {
       "hash": "acd458b049fb28a3e5d02e1a013d36caec4c5a4ef2a0a19df6a0ef1d72270d2e",
@@ -51,9 +51,9 @@
       "version": "0.1.10"
     },
     "src/health/cors.health.ts": {
-      "hash": "01da72da284454d75259e423824ae9f5cfe1d566095005bc62879e50449dce41",
+      "hash": "10dcb2e6159d253d4a4985b59961096b8529ba673a24ed07b8a7536b7910946e",
       "module": "cors",
-      "version": "0.1.9"
+      "version": "0.1.16"
     },
     "src/health/cors.py": {
       "hash": "6cfa80da46ebe6ff079dc63a41b4af4e518de8e38f37c0daa2a548f07d3c0a11",
@@ -76,9 +76,9 @@
       "version": "0.1.10"
     },
     "src/health/oauth.py": {
-      "hash": "347092b467c32a062fedf0fe50fd6edc2c229319b065857e764631b444652a26",
+      "hash": "ddc35bb852bef3d05dd5a71737db9d7c06c8124d932fe0b0809e5bc99c513c3e",
       "module": "oauth",
-      "version": "0.1.10"
+      "version": "0.1.16"
     },
     "src/health/postgres-health.controller.ts": {
       "hash": "720e6f6997ccf06f19c6fd369e45f60a06761a83299c8f47378e4ce95cee1652",
@@ -136,9 +136,9 @@
       "version": "0.1.9"
     },
     "src/health/users_core.py": {
-      "hash": "63b367df4b021ac5d608b600866620868c468d435cf97729e0ad84055f82037a",
+      "hash": "392884d3a8f70b3279965b9d1fe4b297814681cc024b055f8b666ab21b66085f",
       "module": "users_core",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "src/modules/free/auth/core/auth-core.controller.ts": {
       "hash": "124925c204869f90b1b5b0f51ad7a680020c8d44e97c5153e73aff7751b298d6",
@@ -206,9 +206,9 @@
       "version": "0.1.10"
     },
     "src/modules/free/auth/oauth/oauth.service.ts": {
-      "hash": "699f0704b654115e5f363a9c0b0070bc2bf7cc12b4a7c6087aac0de849792cb8",
+      "hash": "38dd5c9e6e5cb55756076f544894877123d46a8b03d3fb74957883c113730fde",
       "module": "oauth",
-      "version": "0.1.10"
+      "version": "0.1.16"
     },
     "src/modules/free/cache/redis/configuration.ts": {
       "hash": "6920c9a501ee2c4ca0c437872a7365dc4aaf7b302a83a26e3adc01adc7c840dd",
@@ -231,9 +231,9 @@
       "version": "0.1.17"
     },
     "src/modules/free/cache/redis/redis.service.ts": {
-      "hash": "947af79912ff4e9c59e4b3ff3fcda9dac135d1a5ab411826d7938e8d5632f598",
+      "hash": "ec6eb387e7c0576fe7bf5430fccb98377b6ba30d3a1a2cb1e9976f937998ba14",
       "module": "redis",
-      "version": "0.1.17"
+      "version": "0.1.23"
     },
     "src/modules/free/cache/redis/redis.validation.ts": {
       "hash": "8034eb114242664d3fe02bc25c03ed3600a5a7d59ff807975bdb643f0d8f6729",
@@ -251,9 +251,9 @@
       "version": "0.1.28"
     },
     "src/modules/free/database/db_postgres/postgres.service.ts": {
-      "hash": "ac96ccf68bddc625a4a23058b17415fdf26ee2561db2d9b641b9e5fe4978d4e3",
+      "hash": "25a583fb3f30e69f6ac3b3a7cbcbdd155d8ae3b4339c1c537a2789dd68a12df9",
       "module": "db_postgres",
-      "version": "0.1.28"
+      "version": "0.1.31"
     },
     "src/modules/free/essentials/deployment/deployment.configuration.ts": {
       "hash": "744e2ad6e7c12d6abb79bf0b27feb0931fad8af684a1dfd3daecf13c74cb438c",
@@ -271,9 +271,9 @@
       "version": "0.1.10"
     },
     "src/modules/free/essentials/deployment/deployment.service.ts": {
-      "hash": "d0a09a7f97289aafb97aad52535217387c0fb65f33cb17d954d8b82d5634b240",
+      "hash": "0ef12cd7a437799c3ae220815ecea433026599d5e2109d502cb239aa7795c443",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/logging/configuration.ts": {
       "hash": "4da6191cfb6117b448f0d962eb0d5285f2384f44d97e5dca6698ea2ca1339e15",
@@ -301,9 +301,9 @@
       "version": "0.1.9"
     },
     "src/modules/free/essentials/logging/logging.service.ts": {
-      "hash": "ae1ecbfb9120172a3c61b767739b9b600677631ecab5371fc07c1c8066ee1d03",
+      "hash": "b6b1a102db9707bf631430baf0eadf7548d3f00afa3fe524a477b28eb885d04f",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "src/modules/free/essentials/logging/validation.ts": {
       "hash": "1ae4efea61c6ad6c10adefea4fe015e243256ca2f7c82cb1cbe1c671e3f2bd9d",
@@ -326,9 +326,9 @@
       "version": "0.1.20"
     },
     "src/modules/free/essentials/middleware/service.ts": {
-      "hash": "9b3b1522435a0b66a085e11303ea4bf2a79b75848893f3e26ad0a8d6777efc42",
+      "hash": "ca446d53811cdf3bce5696b0b74c5d2ec6c1b79ccdc0d9ad0f9c7e0808349b12",
       "module": "middleware",
-      "version": "0.1.20"
+      "version": "0.1.24"
     },
     "src/modules/free/essentials/settings/configuration.ts": {
       "hash": "8d97767834fcfe978c11597fff349aba5a24d5c8cda26d508f031af23e65bc95",
@@ -471,44 +471,44 @@
       "version": "0.1.10"
     },
     "tests/modules/e2e/free/auth/core/core.e2e-spec.ts": {
-      "hash": "c87d87d63d474ddfcd8026347a43a6e0a16bb7bf98f059bd3df8b012426a3106",
+      "hash": "d46fc04226bb089a5271ccdd81648705f442ceec6d90fdfdc7fc46422d225d4f",
       "module": "auth_core",
-      "version": "0.1.10"
+      "version": "0.1.14"
     },
     "tests/modules/e2e/free/auth/oauth/oauth.e2e-spec.ts": {
-      "hash": "4a1d96afc9a953eafa5cff0fec92987a5cae51ad7df86305dfdd50d973c3ce7a",
+      "hash": "c9120eaed4cba43f16aadf43da37f87b6884b6776466c804272a3e58b2685410",
       "module": "oauth",
-      "version": "0.1.10"
+      "version": "0.1.16"
     },
     "tests/modules/e2e/free/cache/redis/redis.e2e-spec.ts": {
-      "hash": "57ee539f44a0d4562403e3e8623e1019e0df2849eb0ef5d84c32f5e3f717b850",
+      "hash": "d54a14394a7758df28661a2a8613e9047a85edf37f204837fdbefe387e1b2432",
       "module": "redis",
-      "version": "0.1.17"
+      "version": "0.1.23"
     },
     "tests/modules/e2e/free/database/db_postgres/db_postgres.e2e-spec.ts": {
-      "hash": "fed050a23f08ce8600964a3a24f8141f4d91dc46d7ff2a14b9f8fd6f7cd04315",
+      "hash": "881870edd6329368787972c4657a1f5e78e4afd661b1d4548bcc6b58402b3a23",
       "module": "db_postgres",
-      "version": "0.1.28"
+      "version": "0.1.31"
     },
     "tests/modules/e2e/free/essentials/deployment/deployment.e2e-spec.ts": {
-      "hash": "d85f055917eeb6b92178bb61fd93037b33ba6bd3d3d201a194dfd088d8191029",
+      "hash": "478a50cd40e033f0f32473389fb7287768a7cdd9212ef04c98d1638d1a782cdb",
       "module": "deployment",
-      "version": "0.1.10"
+      "version": "0.1.13"
     },
     "tests/modules/e2e/free/essentials/logging/logging.e2e-spec.ts": {
-      "hash": "3db4bcfc0910bf86b8109d19bbe9ccaab2bd2617405f367755862358ad088d1a",
+      "hash": "450ee17827c06aa048949eda3bfa4420dca0ed36051ad47ec11317d9c3fec202",
       "module": "logging",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "tests/modules/e2e/free/essentials/settings/settings.e2e-spec.ts": {
-      "hash": "385b8302649c0d79ec53b98db6668ebacee2b6c468e8ec9bb177eee8a663da1f",
+      "hash": "57832b2187eb645b2f7953d5a04f920c6198b21d85ea03b45ec584c849930312",
       "module": "settings",
-      "version": "0.1.41"
+      "version": "0.1.45"
     },
     "tests/modules/e2e/free/security/cors/cors.e2e-spec.ts": {
-      "hash": "aaae79ee70e805ebdd48c9d4ba72db24a19b5c02f691c5737cb0036d3c2745d4",
+      "hash": "82045f963f66a3be43225b1586f4718d4edb03963b1d75ee5851ea035fc5b63f",
       "module": "cors",
-      "version": "0.1.9"
+      "version": "0.1.16"
     },
     "tests/modules/e2e/free/security/rate_limiting/rate_limiting.e2e-spec.ts": {
       "hash": "8ad301469d7505aecbf6b02ceb9c7834d7bca307bd563bddd4cfc34ad759c624",
@@ -516,14 +516,14 @@
       "version": "0.1.7"
     },
     "tests/modules/e2e/free/security/security_headers/security_headers.e2e-spec.ts": {
-      "hash": "f9e5241c4a276408fd2676599c6ce3facab29071ae2afc4ee26186aa2d8719e5",
+      "hash": "9ea39867c6eba16e77e9b9b4718174cfc5f9ad97e918697b8e7161bd5423caae",
       "module": "security_headers",
-      "version": "0.1.3"
+      "version": "0.1.7"
     },
     "tests/modules/e2e/free/users/users_core/users_core.e2e-spec.ts": {
-      "hash": "55d432e925719cc96d0b98393d692155310cdc5ab07676007592f82c9a278ac3",
+      "hash": "457de7b3b438eac255174279d7646adf05a60c6a14785bcc10a8fed313890257",
       "module": "users_core",
-      "version": "0.1.9"
+      "version": "0.1.13"
     },
     "tests/modules/free/auth/core/auth-core.spec.ts": {
       "hash": "f59b9079d28fea926c6e158b91b644a410ca8125e5610731a0c6cfd76d9e3c6a",

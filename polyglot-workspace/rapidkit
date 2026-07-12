@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+VENV_RAPIDKIT="$SCRIPT_DIR/.venv/bin/rapidkit"
+if [ -x "$VENV_RAPIDKIT" ]; then
+  exec "$VENV_RAPIDKIT" "$@"
+fi
+
+if command -v rapidkit >/dev/null 2>&1; then
+  RAPIDKIT_CMD=$(command -v rapidkit)
+  if [ "$RAPIDKIT_CMD" != "$SCRIPT_DIR/rapidkit" ] && [ "$RAPIDKIT_CMD" != "$SCRIPT_DIR/.workspai/rapidkit" ] && [ "$RAPIDKIT_CMD" != "$SCRIPT_DIR/.rapidkit/rapidkit" ]; then
+    RAPIDKIT_LOCAL_LAUNCHER_BYPASS=1 exec "$RAPIDKIT_CMD" "$@"
+  fi
+fi
+
+for RAPIDKIT_CORE in "$HOME/.local/bin/rapidkit" "$HOME/Library/Python/3.14/bin/rapidkit" "$HOME/Library/Python/3.13/bin/rapidkit" "$HOME/Library/Python/3.12/bin/rapidkit" "$HOME/Library/Python/3.11/bin/rapidkit" "$HOME/Library/Python/3.10/bin/rapidkit"; do
+  if [ -x "$RAPIDKIT_CORE" ]; then
+    exec "$RAPIDKIT_CORE" "$@"
+  fi
+done
+
+echo "RapidKit launcher could not find a local Python CLI." 1>&2
+echo "- Python engine installation was intentionally skipped for this workspace." 1>&2
+echo "- For npm-owned workspace commands, run: npx workspai <command>" 1>&2
+echo "- To install the local Python engine later, create a RapidKit Core module-enabled project, then run: npx workspai workspace run init" 1>&2
+echo "Tip: use 'npx workspai workspace model --json' for Workspace Intelligence without the Python engine." 1>&2
+exit 1

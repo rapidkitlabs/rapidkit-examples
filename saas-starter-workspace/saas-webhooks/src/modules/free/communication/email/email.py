@@ -10,7 +10,7 @@ from pathlib import Path
 from types import ModuleType
 
 _VENDOR_MODULE = "email"
-_VENDOR_VERSION = "0.1.17"
+_VENDOR_VERSION = "0.1.24"
 _VENDOR_RELATIVE_PATH = "src/modules/free/communication/email/email.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_email"

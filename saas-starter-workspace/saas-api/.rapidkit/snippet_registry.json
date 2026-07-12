@@ -6,7 +6,7 @@
       "priority": 10,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:13.560459+00:00",
+      "last_attempt_at": "2026-07-12T17:35:18.094529+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/ddd",
@@ -20,7 +20,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -58,7 +58,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -81,7 +81,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:13.560459+00:00"
+      "applied_at": "2026-07-12T17:35:18.094529+00:00"
     },
     "logging_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -89,7 +89,7 @@
       "priority": 10,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:13.567152+00:00",
+      "last_attempt_at": "2026-07-12T17:35:18.105637+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/ddd",
@@ -103,7 +103,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -141,7 +141,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -172,7 +172,7 @@
       "priority": 10,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:13.573198+00:00",
+      "last_attempt_at": "2026-07-12T17:35:18.115483+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/ddd",
@@ -186,7 +186,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -224,7 +224,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -255,7 +255,7 @@
       "priority": 10,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:13.579209+00:00",
+      "last_attempt_at": "2026-07-12T17:35:18.124207+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/ddd",
@@ -269,7 +269,7 @@
           ],
           "file_path": "logs/app.log",
           "async_queue": true,
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "healthcheck_enabled": true,
           "healthcheck_path": "/api/health/module/logging"
@@ -307,7 +307,7 @@
           },
           "LOG_SAMPLING_RATE": {
             "type": "number",
-            "default": 1.0,
+            "default": 1,
             "description": "Sampling rate for verbose loggers"
           },
           "LOG_ENABLE_REDACTION": {
@@ -338,7 +338,7 @@
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
       "status": "applied",
-      "last_attempt_at": "2026-02-15T18:32:13.583599+00:00",
+      "last_attempt_at": "2026-07-12T17:35:18.130457+00:00",
       "template": "logging_fields.snippet.j2",
       "module_slug": "free/essentials/logging",
       "profile": "fastapi/ddd",
@@ -353,7 +353,7 @@
           ],
           "async_queue": true,
           "file_path": "logs/app.log",
-          "sampling_rate": 1.0,
+          "sampling_rate": 1,
           "enable_redaction": true,
           "correlation_header": "X-Request-ID",
           "healthcheck_enabled": true,
@@ -374,8 +374,8 @@
       "version": "0.1.0",
       "priority": 10,
       "file": ".env",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:28.470978+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:59.806158+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -398,16 +398,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.257934+00:00",
-      "last_error": "already present in .env"
+      "applied_at": "2026-07-12T17:34:59.806158+00:00"
     },
     "auth_core_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 10,
       "file": ".env.dev",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:28.475564+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:59.811152+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -430,16 +429,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.260786+00:00",
-      "last_error": "already present in .env.dev"
+      "applied_at": "2026-02-15T18:32:58.260786+00:00"
     },
     "auth_core_env::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 10,
       "file": ".env.prod",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:28.484541+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:59.816833+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -462,16 +460,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.264341+00:00",
-      "last_error": "already present in .env.prod"
+      "applied_at": "2026-02-15T18:32:58.264341+00:00"
     },
     "auth_core_env::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 10,
       "file": ".env.example",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:28.491420+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:59.821476+00:00",
       "template": "auth_env.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -494,16 +491,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.267199+00:00",
-      "last_error": "already present in .env.example"
+      "applied_at": "2026-02-15T18:32:58.267199+00:00"
     },
     "auth_core_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "0.1.0",
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:28.507263+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:59.835457+00:00",
       "template": "settings_fields.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -534,16 +530,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.278159+00:00",
-      "last_error": "already present in settings.py"
+      "applied_at": "2026-02-15T18:32:58.278159+00:00"
     },
     "auth_core_quickstart::README.md": {
       "anchor": "<!-- <<<inject:module-snippet>>> -->",
       "version": "0.1.0",
       "priority": 5,
       "file": "src/README.md",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:28.513947+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:34:59.922800+00:00",
       "template": "core.snippet.j2",
       "module_slug": "free/auth/core",
       "profile": "fastapi/ddd",
@@ -555,16 +550,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:32:58.368154+00:00",
-      "last_error": "already present in README.md"
+      "applied_at": "2026-07-12T17:34:59.922800+00:00"
     },
     "db_postgres_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "1.0.0",
       "priority": 5,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:38.107077+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:06.706120+00:00",
       "template": "settings_fields.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -587,16 +581,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.333102+00:00",
-      "last_error": "already present in settings.py"
+      "applied_at": "2026-02-15T18:33:51.333102+00:00"
     },
     "db_postgres_env_defaults::.env": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:38.122098+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:06.711587+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -617,16 +610,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.336670+00:00",
-      "last_error": "already present in .env"
+      "applied_at": "2026-07-12T17:35:06.711587+00:00"
     },
     "db_postgres_env_defaults::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env.dev",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:38.131662+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:06.717018+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -647,16 +639,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.339214+00:00",
-      "last_error": "already present in .env.dev"
+      "applied_at": "2026-02-15T18:33:51.339214+00:00"
     },
     "db_postgres_env_defaults::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env.prod",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:38.141103+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:06.721945+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -677,16 +668,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.341479+00:00",
-      "last_error": "already present in .env.prod"
+      "applied_at": "2026-02-15T18:33:51.341479+00:00"
     },
     "db_postgres_env_defaults::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 8,
       "file": ".env.example",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:38.151468+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:06.726159+00:00",
       "template": "db_postgres.snippet.j2",
       "module_slug": "free/database/db_postgres",
       "profile": "fastapi/ddd",
@@ -707,16 +697,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:51.343762+00:00",
-      "last_error": "already present in .env.example"
+      "applied_at": "2026-02-15T18:33:51.343762+00:00"
     },
     "redis_env::.env": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:34.903237+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:28.718952+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -789,16 +778,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.349060+00:00",
-      "last_error": "already present in .env"
+      "applied_at": "2026-07-12T17:35:28.718952+00:00"
     },
     "redis_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env.dev",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:34.919252+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:28.727492+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -871,16 +859,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.354996+00:00",
-      "last_error": "already present in .env.dev"
+      "applied_at": "2026-02-15T18:33:59.354996+00:00"
     },
     "redis_env::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env.prod",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:34.935483+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:28.736267+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -953,16 +940,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.361064+00:00",
-      "last_error": "already present in .env.prod"
+      "applied_at": "2026-02-15T18:33:59.361064+00:00"
     },
     "redis_env::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "1.0.0",
       "priority": 10,
       "file": ".env.example",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:34.950158+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:28.744662+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -1035,16 +1021,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.367291+00:00",
-      "last_error": "already present in .env.example"
+      "applied_at": "2026-02-15T18:33:59.367291+00:00"
     },
     "redis_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "1.0.0",
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:34.969887+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:28.758133+00:00",
       "template": "redis_fields.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -1071,16 +1056,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:33:59.379777+00:00",
-      "last_error": "already present in settings.py"
+      "applied_at": "2026-02-15T18:33:59.379777+00:00"
     },
     "redis_quickstart::README.md": {
       "anchor": "<!-- <<<inject:module-snippet>>> -->",
       "version": "1.0.0",
       "priority": 5,
       "file": "src/README.md",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:34.982363+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:28.845892+00:00",
       "template": "redis.snippet.j2",
       "module_slug": "free/cache/redis",
       "profile": "fastapi/ddd",
@@ -1091,16 +1075,15 @@
         "additionalProperties": true,
         "required": []
       },
-      "applied_at": "2026-02-15T18:33:59.425402+00:00",
-      "last_error": "already present in README.md"
+      "applied_at": "2026-07-12T17:35:28.845892+00:00"
     },
     "users_core_env::.env": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:48.297134+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:41.194649+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1126,16 +1109,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.839174+00:00",
-      "last_error": "already present in .env"
+      "applied_at": "2026-07-12T17:35:41.194649+00:00"
     },
     "users_core_env::.env.example": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env.example",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:48.313995+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:41.206463+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1161,16 +1143,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.848460+00:00",
-      "last_error": "already present in .env.example"
+      "applied_at": "2026-02-15T18:34:15.848460+00:00"
     },
     "users_core_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env.dev",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:48.328871+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:41.218214+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1196,16 +1177,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.861058+00:00",
-      "last_error": "already present in .env.dev"
+      "applied_at": "2026-02-15T18:34:15.861058+00:00"
     },
     "users_core_env::.env.prod": {
       "anchor": "# <<<inject:module-env>>>",
       "version": "0.1.0",
       "priority": 15,
       "file": ".env.prod",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:48.341753+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:41.228720+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1231,16 +1211,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.869391+00:00",
-      "last_error": "already present in .env.prod"
+      "applied_at": "2026-02-15T18:34:15.869391+00:00"
     },
     "users_core_settings_fields::settings.py": {
       "anchor": "# <<<inject:settings-fields>>>",
       "version": "0.1.0",
       "priority": 20,
       "file": "src/modules/free/essentials/settings/settings.py",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:48.357597+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:41.241498+00:00",
       "template": "users_core.snippet.j2",
       "module_slug": "free/users/users_core",
       "profile": "fastapi/ddd",
@@ -1256,16 +1235,15 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:34:15.881067+00:00",
-      "last_error": "already present in settings.py"
+      "applied_at": "2026-02-15T18:34:15.881067+00:00"
     },
     "security_headers_quickstart::README.md": {
       "anchor": "<!-- <<<inject:module-snippet>>> -->",
       "version": "1.0.0",
       "priority": 10,
       "file": "src/README.md",
-      "status": "failed",
-      "last_attempt_at": "2026-02-16T12:10:43.436751+00:00",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:31.193876+00:00",
       "template": "security_headers.snippet.j2",
       "module_slug": "free/security/security_headers",
       "profile": "fastapi/ddd",
@@ -1285,8 +1263,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-15T18:35:18.449953+00:00",
-      "last_error": "already present in README.md"
+      "applied_at": "2026-02-15T18:35:18.449953+00:00"
     },
     "oauth_env::.env": {
       "anchor": "# <<<inject:module-env>>>",
@@ -1294,7 +1271,7 @@
       "priority": 10,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:31.051041+00:00",
+      "last_attempt_at": "2026-07-12T17:35:22.539021+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/oauth",
       "profile": "fastapi/ddd",
@@ -1352,7 +1329,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-16T12:10:31.051041+00:00"
+      "applied_at": "2026-07-12T17:35:22.539021+00:00"
     },
     "oauth_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -1360,7 +1337,7 @@
       "priority": 10,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:31.066168+00:00",
+      "last_attempt_at": "2026-07-12T17:35:22.545632+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/oauth",
       "profile": "fastapi/ddd",
@@ -1426,7 +1403,7 @@
       "priority": 10,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:31.082566+00:00",
+      "last_attempt_at": "2026-07-12T17:35:22.552895+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/oauth",
       "profile": "fastapi/ddd",
@@ -1492,7 +1469,7 @@
       "priority": 10,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:31.098394+00:00",
+      "last_attempt_at": "2026-07-12T17:35:22.559511+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/oauth",
       "profile": "fastapi/ddd",
@@ -1558,7 +1535,7 @@
       "priority": 10,
       "file": ".env",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:32.924383+00:00",
+      "last_attempt_at": "2026-07-12T17:35:33.344167+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/session",
       "profile": "fastapi/ddd",
@@ -1629,7 +1606,7 @@
         "required": []
       },
       "conflict_resolution": "merge",
-      "applied_at": "2026-02-16T12:10:32.924383+00:00"
+      "applied_at": "2026-07-12T17:35:33.344167+00:00"
     },
     "session_env::.env.dev": {
       "anchor": "# <<<inject:module-env>>>",
@@ -1637,7 +1614,7 @@
       "priority": 10,
       "file": ".env.dev",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:32.940518+00:00",
+      "last_attempt_at": "2026-07-12T17:35:33.352939+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/session",
       "profile": "fastapi/ddd",
@@ -1716,7 +1693,7 @@
       "priority": 10,
       "file": ".env.prod",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:32.958282+00:00",
+      "last_attempt_at": "2026-07-12T17:35:33.360311+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/session",
       "profile": "fastapi/ddd",
@@ -1795,7 +1772,7 @@
       "priority": 10,
       "file": ".env.example",
       "status": "applied",
-      "last_attempt_at": "2026-02-16T12:10:32.973799+00:00",
+      "last_attempt_at": "2026-07-12T17:35:33.369239+00:00",
       "template": "env.snippet.j2",
       "module_slug": "free/auth/session",
       "profile": "fastapi/ddd",
@@ -1867,6 +1844,345 @@
       },
       "conflict_resolution": "merge",
       "applied_at": "2026-02-16T12:10:32.973799+00:00"
+    },
+    "middleware_correlation_factory::middleware.py": {
+      "anchor": "# <<<inject:middleware-factories>>>",
+      "version": "0.1.0",
+      "priority": 20,
+      "file": "src/modules/free/essentials/middleware/middleware.py",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:20.450033+00:00",
+      "template": "middleware.snippet.j2",
+      "module_slug": "free/essentials/middleware",
+      "profile": "fastapi/ddd",
+      "target": "src/modules/free/essentials/middleware/middleware.py",
+      "patch_mode": "ast_py",
+      "context": {
+        "request_header": "X-Request-ID",
+        "response_header": "X-Request-ID"
+      },
+      "applied_at": "2026-07-12T17:35:20.450033+00:00"
+    },
+    "rate_limiting_env::.env": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:26.122982+00:00",
+      "template": "rate_limiting_env.snippet.j2",
+      "module_slug": "free/security/rate_limiting",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "defaults": {
+          "enabled": true,
+          "backend": "memory",
+          "default_limit": 120,
+          "default_window": 60,
+          "redis_url": "redis://localhost:6379/0"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable the rate limiting runtime."
+          },
+          "RATE_LIMIT_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "enum": [
+              "memory",
+              "redis"
+            ]
+          },
+          "RATE_LIMIT_REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Redis connection string when RATE_LIMIT_BACKEND=redis."
+          },
+          "RATE_LIMIT_DEFAULT_LIMIT": {
+            "type": "int",
+            "default": 120
+          },
+          "RATE_LIMIT_DEFAULT_WINDOW": {
+            "type": "int",
+            "default": 60
+          },
+          "RATE_LIMIT_TRUST_FORWARDED_FOR": {
+            "type": "bool",
+            "default": false
+          },
+          "RATE_LIMIT_IDENTITY_HEADER": {
+            "type": "str",
+            "default": "X-RateLimit-Identity"
+          },
+          "RATE_LIMIT_RULES_JSON": {
+            "type": "str",
+            "default": "",
+            "description": "JSON encoded overrides appended to defaults."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-07-12T17:35:26.122982+00:00"
+    },
+    "rate_limiting_env::.env.dev": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env.dev",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:26.133660+00:00",
+      "template": "rate_limiting_env.snippet.j2",
+      "module_slug": "free/security/rate_limiting",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "defaults": {
+          "enabled": true,
+          "backend": "memory",
+          "default_limit": 120,
+          "default_window": 60,
+          "redis_url": "redis://localhost:6379/0"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable the rate limiting runtime."
+          },
+          "RATE_LIMIT_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "enum": [
+              "memory",
+              "redis"
+            ]
+          },
+          "RATE_LIMIT_REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Redis connection string when RATE_LIMIT_BACKEND=redis."
+          },
+          "RATE_LIMIT_DEFAULT_LIMIT": {
+            "type": "int",
+            "default": 120
+          },
+          "RATE_LIMIT_DEFAULT_WINDOW": {
+            "type": "int",
+            "default": 60
+          },
+          "RATE_LIMIT_TRUST_FORWARDED_FOR": {
+            "type": "bool",
+            "default": false
+          },
+          "RATE_LIMIT_IDENTITY_HEADER": {
+            "type": "str",
+            "default": "X-RateLimit-Identity"
+          },
+          "RATE_LIMIT_RULES_JSON": {
+            "type": "str",
+            "default": "",
+            "description": "JSON encoded overrides appended to defaults."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-07-12T17:35:26.133660+00:00"
+    },
+    "rate_limiting_env::.env.prod": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env.prod",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:26.145677+00:00",
+      "template": "rate_limiting_env.snippet.j2",
+      "module_slug": "free/security/rate_limiting",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "defaults": {
+          "enabled": true,
+          "backend": "memory",
+          "default_limit": 120,
+          "default_window": 60,
+          "redis_url": "redis://localhost:6379/0"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable the rate limiting runtime."
+          },
+          "RATE_LIMIT_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "enum": [
+              "memory",
+              "redis"
+            ]
+          },
+          "RATE_LIMIT_REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Redis connection string when RATE_LIMIT_BACKEND=redis."
+          },
+          "RATE_LIMIT_DEFAULT_LIMIT": {
+            "type": "int",
+            "default": 120
+          },
+          "RATE_LIMIT_DEFAULT_WINDOW": {
+            "type": "int",
+            "default": 60
+          },
+          "RATE_LIMIT_TRUST_FORWARDED_FOR": {
+            "type": "bool",
+            "default": false
+          },
+          "RATE_LIMIT_IDENTITY_HEADER": {
+            "type": "str",
+            "default": "X-RateLimit-Identity"
+          },
+          "RATE_LIMIT_RULES_JSON": {
+            "type": "str",
+            "default": "",
+            "description": "JSON encoded overrides appended to defaults."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-07-12T17:35:26.145677+00:00"
+    },
+    "rate_limiting_env::.env.example": {
+      "anchor": "# <<<inject:module-env>>>",
+      "version": "1.0.0",
+      "priority": 15,
+      "file": ".env.example",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:26.157919+00:00",
+      "template": "rate_limiting_env.snippet.j2",
+      "module_slug": "free/security/rate_limiting",
+      "profile": "fastapi/ddd",
+      "target": ".env,.env.dev,.env.prod,.env.example",
+      "context": {
+        "defaults": {
+          "enabled": true,
+          "backend": "memory",
+          "default_limit": 120,
+          "default_window": 60,
+          "redis_url": "redis://localhost:6379/0"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RATE_LIMIT_ENABLED": {
+            "type": "bool",
+            "default": true,
+            "description": "Enable the rate limiting runtime."
+          },
+          "RATE_LIMIT_BACKEND": {
+            "type": "str",
+            "default": "memory",
+            "enum": [
+              "memory",
+              "redis"
+            ]
+          },
+          "RATE_LIMIT_REDIS_URL": {
+            "type": "str",
+            "default": "redis://localhost:6379/0",
+            "description": "Redis connection string when RATE_LIMIT_BACKEND=redis."
+          },
+          "RATE_LIMIT_DEFAULT_LIMIT": {
+            "type": "int",
+            "default": 120
+          },
+          "RATE_LIMIT_DEFAULT_WINDOW": {
+            "type": "int",
+            "default": 60
+          },
+          "RATE_LIMIT_TRUST_FORWARDED_FOR": {
+            "type": "bool",
+            "default": false
+          },
+          "RATE_LIMIT_IDENTITY_HEADER": {
+            "type": "str",
+            "default": "X-RateLimit-Identity"
+          },
+          "RATE_LIMIT_RULES_JSON": {
+            "type": "str",
+            "default": "",
+            "description": "JSON encoded overrides appended to defaults."
+          }
+        },
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-07-12T17:35:26.157919+00:00"
+    },
+    "rate_limiting_settings_fields::settings.py": {
+      "anchor": "# <<<inject:settings-fields>>>",
+      "version": "1.0.0",
+      "priority": 25,
+      "file": "src/modules/free/essentials/settings/settings.py",
+      "status": "applied",
+      "last_attempt_at": "2026-07-12T17:35:26.593966+00:00",
+      "template": "rate_limiting_settings_fields.snippet.j2",
+      "module_slug": "free/security/rate_limiting",
+      "profile": "fastapi/ddd",
+      "target": "src/modules/free/essentials/settings/settings.py",
+      "patch_mode": "ast_py",
+      "context": {
+        "defaults": {
+          "enabled": true,
+          "backend": "memory",
+          "redis_url": "redis://localhost:6379/0",
+          "redis_prefix": "rate-limit",
+          "trust_forwarded_for": false,
+          "forwarded_for_header": "X-Forwarded-For",
+          "identity_header": "X-RateLimit-Identity",
+          "default_rule_name": "default",
+          "default_scope": "identity",
+          "default_limit": 120,
+          "default_window": 60,
+          "default_priority": 100,
+          "default_block_seconds": null,
+          "headers": {
+            "limit": "X-RateLimit-Limit",
+            "remaining": "X-RateLimit-Remaining",
+            "reset": "X-RateLimit-Reset",
+            "retry_after": "Retry-After",
+            "rule": "X-RateLimit-Rule"
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true,
+        "required": []
+      },
+      "conflict_resolution": "merge",
+      "applied_at": "2026-07-12T17:35:26.593966+00:00"
     }
   }
 }

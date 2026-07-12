@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "kind": "rapidkit.workspace.contract",
+  "generatedAt": "2026-07-12T17:03:45.569Z",
+  "workspace": {
+    "name": "go-only-workspace",
+    "profile": "go-only"
+  },
+  "projects": []
+}

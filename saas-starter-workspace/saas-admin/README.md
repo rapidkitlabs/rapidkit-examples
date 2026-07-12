@@ -9,21 +9,18 @@ Admin operations API for internal tools, user management, and support workflows.
 ## ⚡ Quick Start
 
 ```bash
-# Load the project-aware RapidKit CLI
-source .rapidkit/activate
-
 # Bootstrap dependencies
-rapidkit init
+npx workspai init
 
 # Copy env templates and install hooks/tooling
 ./bootstrap.sh
 
 # Start development server on port 8001
-rapidkit dev --port 8001
+npx workspai dev --port 8001
 # Or: make dev
 
 # Run tests
-rapidkit test
+npx workspai test
 
 # Type-check and lint
 make typecheck
@@ -41,39 +38,38 @@ make lint
 
 ---
 
-## 🎯 Features
+## 🎯 Implemented Features
 
 ### Admin Operations
 
 - **User Management:**
   - List all users with filtering
-  - View user details and activity
-  - User impersonation capabilities (TODO)
-  - Account suspension/activation (TODO)
-
-- **Support Tools:**
-  - User search by email/ID
-  - Session management
-  - Activity audit trails (TODO)
-  - Support ticket integration (TODO)
+  - Disable a user account
+  - Record the action in an in-memory audit log
 
 - **Internal Dashboards:**
-  - System metrics
-  - User statistics
-  - Subscription analytics (TODO)
-  - Revenue reports (TODO)
+  - User status metrics
+  - Subscription inventory
+  - Monthly recurring revenue summary
+  - Authenticated admin health
 
 ### Security
 
 - **Admin Authentication:**
-  - Same auth modules as `saas-api`
-  - JWT + session cookie support
-  - Admin role verification (TODO)
+  - Dedicated admin login
+  - Bearer tokens carrying an explicit admin role
+  - Admin role verification on protected routes
 
 - **Access Control:**
   - Admin-only endpoints
-  - Permission-based operations (TODO)
-  - Audit logging for sensitive actions (TODO)
+  - Audit recording for user disable operations
+
+### Extension Ideas (Not Implemented)
+
+- User impersonation
+- Support ticket integration
+- Persistent audit storage
+- Fine-grained permission policies
 
 ---
 
@@ -117,7 +113,7 @@ saas-admin/
 │   │   └── presentation/    # API layer
 │   ├── routing/
 │   │   ├── __init__.py      # Router assembly
-│   │   ├── admin.py         # Admin-specific routes (TODO)
+│   │   ├── saas_admin.py    # Implemented admin routes
 │   │   ├── health.py        # Health checks
 │   │   └── notes.py         # Example feature
 │   ├── modules/
@@ -154,27 +150,25 @@ import requests
 
 BASE = 'http://localhost:8001/api'
 
-# Admin login (same as saas-api)
-r = requests.post(f'{BASE}/auth/login', json={
+# Admin login
+r = requests.post(f'{BASE}/admin/auth/login', json={
     'email': 'admin@example.com',
     'password': 'AdminPass123!'
 })
 token = r.json()['access_token']
 headers = {'Authorization': f'Bearer {token}'}
 
-# List all users (admin endpoint - TODO)
+# List all users
 users = requests.get(f'{BASE}/admin/users', headers=headers)
 print(users.json())
 
-# Get user details (admin endpoint - TODO)
-user = requests.get(f'{BASE}/admin/users/usr_123', headers=headers)
-print(user.json())
+# Disable a user and record an audit event
+result = requests.put(f'{BASE}/admin/users/usr_123/ban', headers=headers)
+print(result.json())
 
-# Impersonate user (admin endpoint - TODO)
-impersonate = requests.post(f'{BASE}/admin/impersonate/usr_123', 
-    headers=headers
-)
-print(impersonate.json())
+# Read subscription and revenue summaries
+subscriptions = requests.get(f'{BASE}/admin/subscriptions', headers=headers)
+revenue = requests.get(f'{BASE}/admin/metrics/revenue', headers=headers)
 ```
 
 ### Health Monitoring
@@ -194,19 +188,18 @@ print(auth_health.json())
 ## 🚀 Add More Modules
 
 ```bash
-source .rapidkit/activate
 
 # Add database for audit logs
-rapidkit add module db_postgres
+npx workspai add module db_postgres
 
 # Add Redis for session storage
-rapidkit add module redis
+npx workspai add module redis
 
 # Add email for admin notifications
-rapidkit add module email
+npx workspai add module email
 
 # Add monitoring
-rapidkit add module observability.core
+npx workspai add module observability.core
 ```
 
 ---
@@ -236,7 +229,7 @@ openssl rand -base64 32  # Session secret
 
 ```bash
 # Run all tests
-rapidkit test
+npx workspai test
 
 # Test admin operations
 pytest tests/test_admin_ops.py -v
@@ -286,8 +279,8 @@ docker-compose up -d
 - [saas-nest](../saas-nest/README.md) - NestJS service
 
 **RapidKit documentation:**
-- [Modules Catalog](https://getrapidkit.com/docs/modules)
-- [CLI Reference](https://getrapidkit.com/docs/cli)
+- [Modules Catalog](https://www.workspai.dev/docs/cli/modules)
+- [CLI Reference](https://www.workspai.dev/docs/cli)
 
 ---
 
@@ -296,7 +289,7 @@ docker-compose up -d
 **Port conflict with saas-api:**
 ```bash
 # Always run admin API on port 8001
-rapidkit dev --port 8001
+npx workspai dev --port 8001
 ```
 
 **Authentication issues:**

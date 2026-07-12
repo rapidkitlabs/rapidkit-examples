@@ -5,7 +5,7 @@ import { registerAs } from "@nestjs/config";
 
 const VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT";
 const VENDOR_MODULE = "settings";
-const VENDOR_VERSION = "0.1.41";
+const VENDOR_VERSION = "0.1.45";
 const VENDOR_CONFIGURATION_RELATIVE = "nestjs/configuration.js";
 const SETTINGS_NAMESPACE = "settings";
 
@@ -116,7 +116,7 @@ function buildDefault(): SettingsConfig {
     ENV: process.env.NODE_ENV ?? 'development',
     DEBUG: process.env.DEBUG === '1' || process.env.DEBUG?.toLowerCase() === 'true',
     PROJECT_NAME: process.env.APP_NAME ?? 'RapidKit Service',
-    SECRET_KEY: process.env.SECRET_KEY ?? 'SitXn3SuirRDSPAc0oStvL4QubiNfnRTFr6h3g1fr7MQ4d8c',
+    SECRET_KEY: process.env.SECRET_KEY ?? 'development-only-change-me',
     VERSION: process.env.APP_VERSION ?? '0.0.1',
     ALLOWED_HOSTS: toList(process.env.ALLOWED_HOSTS, '*'),
     CONFIG_FILES: [],

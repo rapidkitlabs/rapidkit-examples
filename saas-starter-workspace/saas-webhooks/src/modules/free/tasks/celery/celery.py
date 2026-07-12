@@ -13,7 +13,7 @@ from typing import Any
 from fastapi import APIRouter, Depends, FastAPI
 
 _VENDOR_MODULE = "celery"
-_VENDOR_VERSION = "0.1.8"
+_VENDOR_VERSION = "0.1.13"
 _VENDOR_RELATIVE_PATH = "src/modules/free/tasks/celery/celery.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_celery"

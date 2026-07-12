@@ -34,11 +34,27 @@ from src.modules.free.cache.redis import (
     refresh_vendor_module,
     register_redis,
 )
-import src.modules.free.users.users_core
-import src.modules.free.users.users_profiles
-import src.modules.free.billing.stripe_payment
+from src.modules.free.auth import core as core
+from src.modules.free.auth import oauth as oauth
+from src.modules.free.auth import session as session
+from src.modules.free.billing import cart as cart
+from src.modules.free.billing import inventory as inventory
+from src.modules.free.billing import stripe_payment as stripe_payment
+from src.modules.free.cache.redis import AsyncRedis as AsyncRedis, DEFAULTS as DEFAULTS, RedisClient as RedisClient, RedisSyncClient as RedisSyncClient, SyncRedis as SyncRedis, build_redis_url as build_redis_url, check_redis_connection as check_redis_connection, describe_cache as describe_cache, get_redis as get_redis, get_redis_metadata as get_redis_metadata, get_redis_sync as get_redis_sync, list_features as list_features, redis_dependency as redis_dependency, refresh_vendor_module as refresh_vendor_module, register_redis as register_redis
+from src.modules.free.database import db_postgres as db_postgres
+from src.modules.free.essentials import deployment as deployment
+from src.modules.free.essentials import logging as logging
+from src.modules.free.essentials import middleware as middleware
+from src.modules.free.essentials.settings import BaseSettings as BaseSettings, CustomConfigSource as CustomConfigSource, Field as Field, Settings as Settings, configure_fastapi_app as configure_fastapi_app, get_settings as get_settings, settings as settings, settings_dependency as settings_dependency
+from src.modules.free.security import cors as cors
+from src.modules.free.security import security_headers as security_headers
+from src.modules.free.users import users_core as users_core
+from src.modules.free.users import users_profiles as users_profiles
 import src.modules.free.billing.cart
 import src.modules.free.billing.inventory
+import src.modules.free.billing.stripe_payment
 import src.modules.free.security.cors
 import src.modules.free.security.security_headers
+import src.modules.free.users.users_core
+import src.modules.free.users.users_profiles
 # <<<inject:module-init>>>

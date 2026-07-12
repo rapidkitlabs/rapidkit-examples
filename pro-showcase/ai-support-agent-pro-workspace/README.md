@@ -32,7 +32,7 @@ Use the public AI Agent Workspace first:
 ```bash
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/my-ai-workspace
-npx rapidkit doctor --workspace
+npx workspai doctor workspace
 ```
 
 ## Pro Preview Standard

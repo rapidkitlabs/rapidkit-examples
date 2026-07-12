@@ -1,6 +1,0 @@
-# AI Assistant module config
-# Add module configuration here (example values)
-enabled: true
-model:
-  provider: none
-  model: gpt-4

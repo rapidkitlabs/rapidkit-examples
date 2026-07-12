@@ -24,7 +24,7 @@ def describe_cache(extras: Iterable[tuple[str, Any]] | None = None) -> Dict[str,
 
     payload = {
         "module": "redis",
-        "module_version": "0.1.17",
+        "module_version": "0.1.23",
         "defaults": dict(DEFAULTS),
     }
     metadata = dict(get_redis_metadata())

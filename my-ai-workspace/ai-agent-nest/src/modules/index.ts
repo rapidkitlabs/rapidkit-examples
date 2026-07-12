@@ -19,9 +19,10 @@ const optionalModules: Array<ModuleRef | null> = [
 	registerOptionalModule(() => require('../config/logging.module').LoggingModule as ModuleRef),
 	registerOptionalModule(() => require('../config/settings.module').SettingsModule as ModuleRef),
 	registerOptionalModule(() => require('../deployment/deployment.module').DeploymentModule as ModuleRef),
+	// <<<inject:module-exports>>>
+	// <<<inject:module-exports:ai_assistant_nestjs_module_registry:start>>>
 	registerOptionalModule(() => require('./free/ai/ai_assistant').AiAssistantModule as ModuleRef),
+	// <<<inject:module-exports:ai_assistant_nestjs_module_registry:end>>>
 ];
 
 export const rapidkitModules: ModuleRef[] = optionalModules.filter(Boolean) as ModuleRef[];
-
-// <<<inject:module-exports>>>

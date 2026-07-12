@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { AuthCoreModule } from "../../../../../../src/modules/free/auth/core/auth-core.module";
+import { AuthCoreModule } from "@modules/free/auth/core/auth-core.module";
 
 describe("AuthCore NestJS E2E", () => {
   it("compiles the module", async () => {

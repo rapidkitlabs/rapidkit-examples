@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { DatabasePostgresModule } from "../../../../../../src/modules/free/database/db_postgres/postgres.module";
+import { DatabasePostgresModule } from "@modules/free/database/db_postgres/postgres.module";
 
 describe("DatabasePostgres NestJS E2E", () => {
   it("compiles the module", async () => {

@@ -1,0 +1,17 @@
+{
+  "signature": "RAPIDKIT_WORKSPACE",
+  "createdBy": "workspai-cli",
+  "version": "0.43.1",
+  "createdAt": "2026-07-12T16:26:28.754Z",
+  "name": "my-ai-workspace",
+  "metadata": {
+    "npm": {
+      "packageVersion": "0.43.1",
+      "installMethod": "poetry",
+      "lastUsedAt": "2026-07-12T16:26:28.754Z"
+    },
+    "python": {
+      "pythonVersion": "3.10.19"
+    }
+  }
+}

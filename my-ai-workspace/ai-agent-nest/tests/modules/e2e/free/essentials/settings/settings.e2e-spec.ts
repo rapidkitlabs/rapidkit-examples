@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { SettingsModule } from "../../../../../../src/modules/free/essentials/settings/settings.module";
+import { SettingsModule } from "@modules/free/essentials/settings/settings.module";
 
 describe("Settings NestJS E2E", () => {
   it("compiles the module", async () => {

@@ -11,21 +11,18 @@ Polyglot microservice demonstrating FastAPI/NestJS coexistence in production Saa
 > **Recommended Node version:** `20.19.6` (`.nvmrc` and `.node-version` included)
 
 ```bash
-# Load the project-aware RapidKit CLI
-source .rapidkit/activate
-
 # Bootstrap dependencies
-rapidkit init
+npx workspai init
 
 # Copy env templates and install hooks
 ./bootstrap.sh
 
 # Start development server on port 8002
-rapidkit dev --port 8002
+npx workspai dev --port 8002
 # Or: make dev
 
 # Run tests
-rapidkit test
+npx workspai test
 # Or: make test
 
 # Lint and type-check
@@ -293,16 +290,15 @@ curl -X PUT http://localhost:8002/users/profile \
 ## 🚀 Add More Modules
 
 ```bash
-source .rapidkit/activate
 
 # Add database (when available for NestJS)
-rapidkit add module db_postgres
+npx workspai add module db_postgres
 
 # Add Redis
-rapidkit add module redis
+npx workspai add module redis
 
 # Add logging
-rapidkit add module logging
+npx workspai add module logging
 ```
 
 ---
@@ -332,7 +328,7 @@ RAPIDKIT_SETTINGS_AUTO_RELOAD=true
 
 ```bash
 # Run all tests
-rapidkit test
+npx workspai test
 # Or: yarn test
 
 # E2E tests
@@ -393,7 +389,8 @@ Configure orchestrator:
 | Modules | File-based | Class decorators |
 
 **Both frameworks:**
-- Production-ready
+- Suitable for production-oriented architecture exercises; deployment still
+  requires the hardening and evidence gates documented by this workspace
 - Auto-generated API docs
 - Type safety (Pydantic vs TypeScript)
 - Health check patterns
@@ -413,7 +410,7 @@ Configure orchestrator:
 
 **NestJS resources:**
 - [NestJS Documentation](https://docs.nestjs.com)
-- [RapidKit NestJS Modules](https://getrapidkit.com/docs/modules/nestjs)
+- [RapidKit NestJS Modules](https://www.workspai.dev/docs/cli/modules/nestjs)
 
 ---
 
@@ -422,7 +419,7 @@ Configure orchestrator:
 **Port conflict:**
 ```bash
 # Always run on port 8002
-rapidkit dev --port 8002
+npx workspai dev --port 8002
 ```
 
 **Node version mismatch:**
@@ -436,7 +433,7 @@ asdf install nodejs 20.19.6
 **Module not found errors:**
 ```bash
 # Reinstall dependencies
-rapidkit init
+npx workspai init
 # or
 yarn install
 ```

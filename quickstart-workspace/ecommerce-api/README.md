@@ -38,17 +38,16 @@ docker-compose up -d postgres redis
 ### 2) Bootstrap environment
 
 ```bash
-source .rapidkit/activate
-rapidkit init
+npx workspai init
 ```
 
 ### 3) Run server
 
 ```bash
-rapidkit dev
+npx workspai dev -p 8001
 ```
 
-API docs: `http://localhost:8000/docs`
+API docs: `http://localhost:8001/docs`
 
 ## 🧪 Main Endpoints
 
@@ -71,38 +70,38 @@ API docs: `http://localhost:8000/docs`
 
 ```bash
 # seed sample catalog
-curl -s -X POST http://localhost:8000/api/v1/ecommerce/products/seed
+curl -s -X POST http://localhost:8001/api/v1/ecommerce/products/seed
 
 # create product
-curl -s -X POST http://localhost:8000/api/v1/ecommerce/products \
+curl -s -X POST http://localhost:8001/api/v1/ecommerce/products \
 	-H "Content-Type: application/json" \
 	-d '{"sku":"SKU-100","name":"Wireless Keyboard","price":"79.99","currency":"USD","stock":10}'
 
 # search products
-curl -s "http://localhost:8000/api/v1/ecommerce/products/search?q=keyboard&min_price=50&max_price=150&in_stock=true"
+curl -s "http://localhost:8001/api/v1/ecommerce/products/search?q=keyboard&min_price=50&max_price=150&in_stock=true"
 
 # add to cart
-curl -s -X POST http://localhost:8000/api/v1/ecommerce/cart/items \
+curl -s -X POST http://localhost:8001/api/v1/ecommerce/cart/items \
 	-H "Content-Type: application/json" \
 	-d '{"product_id":"<PRODUCT_ID>","quantity":2}'
 
 # checkout
-curl -s -X POST http://localhost:8000/api/v1/ecommerce/checkout \
+curl -s -X POST http://localhost:8001/api/v1/ecommerce/checkout \
 	-H "Content-Type: application/json" \
 	-d '{"customer_email":"buyer@example.com"}'
 
 # create mock payment intent
-curl -s -X POST http://localhost:8000/api/v1/ecommerce/payments/intents \
+curl -s -X POST http://localhost:8001/api/v1/ecommerce/payments/intents \
 	-H "Content-Type: application/json" \
 	-d '{"order_id":"<ORDER_ID>","provider":"mockpay"}'
 
 # confirm mock payment
-curl -s -X POST http://localhost:8000/api/v1/ecommerce/payments/intents/<INTENT_ID>/confirm \
+curl -s -X POST http://localhost:8001/api/v1/ecommerce/payments/intents/<INTENT_ID>/confirm \
 	-H "Content-Type: application/json" \
 	-d '{"gateway_reference":"gw-demo-001"}'
 
 # simulate provider webhook
-curl -s -X POST http://localhost:8000/api/v1/ecommerce/webhooks/payments \
+curl -s -X POST http://localhost:8001/api/v1/ecommerce/webhooks/payments \
 	-H "Content-Type: application/json" \
 	-d '{"event_type":"payment.succeeded","payment_intent_id":"<INTENT_ID>","order_id":"<ORDER_ID>","status":"succeeded"}'
 ```

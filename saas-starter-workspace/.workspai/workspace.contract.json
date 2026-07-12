@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "kind": "rapidkit.workspace.contract",
+  "generatedAt": "2026-07-12T16:40:17.855Z",
+  "workspace": {
+    "name": "saas-starter-workspace",
+    "profile": "polyglot"
+  },
+  "projects": [
+    {
+      "slug": "saas-admin",
+      "relativePath": "saas-admin",
+      "source": "workspace",
+      "runtime": "python",
+      "framework": "fastapi",
+      "kit": "fastapi.ddd",
+      "modules": [],
+      "ports": [
+        {
+          "name": "http",
+          "port": 8001,
+          "protocol": "http"
+        }
+      ],
+      "contracts": {
+        "owns": [],
+        "apis": [],
+        "publishes": [],
+        "consumes": [],
+        "dependsOn": [],
+        "env": []
+      }
+    },
+    {
+      "slug": "saas-api",
+      "relativePath": "saas-api",
+      "source": "workspace",
+      "runtime": "python",
+      "framework": "fastapi",
+      "kit": "fastapi.ddd",
+      "modules": [],
+      "ports": [
+        {
+          "name": "http",
+          "port": 8000,
+          "protocol": "http"
+        }
+      ],
+      "contracts": {
+        "owns": [],
+        "apis": [],
+        "publishes": [],
+        "consumes": [],
+        "dependsOn": [],
+        "env": []
+      }
+    },
+    {
+      "slug": "saas-nest",
+      "relativePath": "saas-nest",
+      "source": "workspace",
+      "runtime": "node",
+      "framework": "nestjs",
+      "kit": "nestjs.standard",
+      "modules": [],
+      "ports": [
+        {
+          "name": "http",
+          "port": 8002,
+          "protocol": "http"
+        }
+      ],
+      "contracts": {
+        "owns": [],
+        "apis": [],
+        "publishes": [],
+        "consumes": [],
+        "dependsOn": [],
+        "env": []
+      }
+    },
+    {
+      "slug": "saas-webhooks",
+      "relativePath": "saas-webhooks",
+      "source": "workspace",
+      "runtime": "python",
+      "framework": "fastapi",
+      "kit": "fastapi.standard",
+      "modules": [],
+      "ports": [
+        {
+          "name": "http",
+          "port": 8003,
+          "protocol": "http"
+        }
+      ],
+      "contracts": {
+        "owns": [],
+        "apis": [],
+        "publishes": [],
+        "consumes": [],
+        "dependsOn": [],
+        "env": []
+      }
+    }
+  ]
+}

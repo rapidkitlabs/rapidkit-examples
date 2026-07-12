@@ -11,7 +11,7 @@ from types import ModuleType
 from typing import Any, Optional
 
 _VENDOR_MODULE = "settings"
-_VENDOR_VERSION = "0.1.32"
+_VENDOR_VERSION = "0.1.45"
 _VENDOR_RELATIVE_PATH = "src/health/settings.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_settings"

@@ -1,0 +1,18 @@
+{
+  "signature": "RAPIDKIT_WORKSPACE",
+  "createdBy": "workspai-cli",
+  "version": "0.43.1",
+  "createdAt": "2026-07-12T16:51:03.059Z",
+  "name": "polyglot-workspace",
+  "metadata": {
+    "npm": {
+      "packageVersion": "0.43.1",
+      "installMethod": "venv",
+      "lastUsedAt": "2026-07-12T16:51:03.059Z"
+    },
+    "python": {
+      "coreStatus": "skipped",
+      "coreReason": "user-opted-out"
+    }
+  }
+}

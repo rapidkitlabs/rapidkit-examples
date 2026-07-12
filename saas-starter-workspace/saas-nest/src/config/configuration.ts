@@ -8,7 +8,7 @@ import { registerAs } from '@nestjs/config';
 // src/.rapidkit and makes generated projects robust and portable.
 const VENDOR_ROOT_ENV = 'RAPIDKIT_VENDOR_ROOT';
 const VENDOR_MODULE = 'settings';
-const VENDOR_VERSION = '0.1.41';
+const VENDOR_VERSION = '0.1.45';
 const VENDOR_CONFIGURATION_RELATIVE = 'src/config/configuration';
 
 function resolveVendorRoot(): string {
@@ -60,6 +60,34 @@ export default registerAs('app', () => ({
     return raw;
   })(),
   // <<<inject:configuration>>>
+  // <<<inject:configuration:rate_limiting_settings_fields_nestjs:start>>>
+    rateLimiting: {
+      enabled: process.env.RATE_LIMIT_ENABLED === '1' || process.env.RATE_LIMIT_ENABLED?.toLowerCase() === 'true',
+      backend: process.env.RATE_LIMIT_BACKEND ?? 'memory',
+      redisUrl: process.env.RATE_LIMIT_REDIS_URL ?? null,
+      redisPrefix: process.env.RATE_LIMIT_REDIS_PREFIX ?? 'rate-limit',
+      trustForwardedFor:
+        process.env.RATE_LIMIT_TRUST_FORWARDED_FOR === '1' ||
+        process.env.RATE_LIMIT_TRUST_FORWARDED_FOR?.toLowerCase() === 'true',
+      forwardedForHeader: process.env.RATE_LIMIT_FORWARDED_FOR_HEADER ?? 'X-Forwarded-For',
+      identityHeader: process.env.RATE_LIMIT_IDENTITY_HEADER ?? 'X-RateLimit-Identity',
+      defaultRuleName: process.env.RATE_LIMIT_DEFAULT_RULE_NAME ?? 'default',
+      defaultLimit: Number.parseInt(process.env.RATE_LIMIT_DEFAULT_LIMIT ?? '120', 10),
+      defaultWindow: Number.parseInt(process.env.RATE_LIMIT_DEFAULT_WINDOW ?? '60', 10),
+      defaultScope: process.env.RATE_LIMIT_DEFAULT_SCOPE ?? 'identity',
+      defaultPriority: Number.parseInt(process.env.RATE_LIMIT_DEFAULT_PRIORITY ?? '100', 10),
+      defaultBlockSeconds:
+        process.env.RATE_LIMIT_DEFAULT_BLOCK_SECONDS === undefined
+          ? null
+          : Number.parseInt(process.env.RATE_LIMIT_DEFAULT_BLOCK_SECONDS, 10),
+      headerLimit: process.env.RATE_LIMIT_HEADER_LIMIT ?? 'X-RateLimit-Limit',
+      headerRemaining: process.env.RATE_LIMIT_HEADER_REMAINING ?? 'X-RateLimit-Remaining',
+      headerReset: process.env.RATE_LIMIT_HEADER_RESET ?? 'X-RateLimit-Reset',
+      headerRetryAfter: process.env.RATE_LIMIT_HEADER_RETRY_AFTER ?? 'Retry-After',
+      headerRule: process.env.RATE_LIMIT_HEADER_RULE ?? 'X-RateLimit-Rule',
+      rulesJson: process.env.RATE_LIMIT_RULES_JSON ?? '',
+    },
+  // <<<inject:configuration:rate_limiting_settings_fields_nestjs:end>>>
   // <<<inject:configuration:redis_settings_fields_nestjs:start>>>
     redis: {
       url: process.env.REDIS_URL ?? "redis://localhost:6379/0",
@@ -121,7 +149,7 @@ const defaultSettings = () => ({
   ENV: process.env.NODE_ENV ?? 'development',
   DEBUG: process.env.DEBUG === '1' || process.env.DEBUG?.toLowerCase() === 'true',
   PROJECT_NAME: process.env.APP_NAME ?? 'Saas Nest',
-  SECRET_KEY: process.env.SECRET_KEY ?? 'RDvCl6skmyA1tr6reyWXLhuJaXwip9MqymcoU0Auxur9jYp8',
+  SECRET_KEY: process.env.SECRET_KEY ?? 'development-only-change-me',
   VERSION: process.env.APP_VERSION ?? '0.0.1',
   ALLOWED_HOSTS: (process.env.ALLOWED_HOSTS ?? '*').split(',').map((s) => s.trim()).filter(Boolean),
   CONFIG_FILES: [],

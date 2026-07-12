@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { LoggingModule } from "../../../../../../src/modules/free/essentials/logging/logging.module";
+import { LoggingModule } from "@modules/free/essentials/logging/logging.module";
 
 describe("Logging NestJS E2E", () => {
   it("compiles the module", async () => {

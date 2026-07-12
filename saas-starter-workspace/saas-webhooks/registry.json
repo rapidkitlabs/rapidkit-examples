@@ -2,47 +2,47 @@
   "installed_modules": [
     {
       "slug": "free/essentials/settings",
-      "version": "0.1.41",
+      "version": "0.1.45",
       "display_name": "settings"
     },
     {
       "slug": "free/essentials/logging",
-      "version": "0.1.9",
+      "version": "0.1.13",
       "display_name": "logging"
     },
     {
       "slug": "free/essentials/deployment",
-      "version": "0.1.10",
+      "version": "0.1.13",
       "display_name": "deployment"
     },
     {
       "slug": "free/essentials/middleware",
-      "version": "0.1.20",
+      "version": "0.1.24",
       "display_name": "middleware"
     },
     {
       "slug": "free/database/db_postgres",
-      "version": "0.1.28",
+      "version": "0.1.31",
       "display_name": "PostgreSQL"
     },
     {
       "slug": "free/cache/redis",
-      "version": "0.1.17",
+      "version": "0.1.23",
       "display_name": "redis"
     },
     {
       "slug": "free/tasks/celery",
-      "version": "0.1.8",
+      "version": "0.1.13",
       "display_name": "Celery"
     },
     {
       "slug": "free/communication/email",
-      "version": "0.1.17",
+      "version": "0.1.24",
       "display_name": "email"
     },
     {
       "slug": "free/communication/notifications",
-      "version": "0.1.25",
+      "version": "0.1.31",
       "display_name": "notifications"
     }
   ]

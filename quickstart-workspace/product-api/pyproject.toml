@@ -17,8 +17,8 @@ help = "src.cli:help_cmd"
 
 [tool.poetry.dependencies]
 python             = "^3.10.14"
-fastapi            = "^0.128.0"
-uvicorn            = { extras = ["standard"], version = "^0.40.0" }
+fastapi            = "^0.139.0"
+uvicorn            = { extras = ["standard"], version = "^0.50.2" }
 pydantic           = "^2.12.5"
 pydantic-settings  = { version = "^2.12.0", extras = ["yaml"] }
 # <<<inject:poetry-dependencies>>>
@@ -33,15 +33,15 @@ python-json-logger = ">=2.0.0,<3.0"
 pyyaml             = ">=6.0.2,<7.0"
 redis              = ">=5.0.0,<6.0"
 sqlalchemy         = ">=2.0.0,<3.0"
-starlette          = ">=0.38.0,<1.0"
+starlette          = ">=1.3.1,<2.0"
 yamllint           = ">=1.35.0,<2.0"
 [tool.poetry.group.dev.dependencies]
-pytest = "^9.0.2"
+pytest = "^9.0.3"
 pytest-asyncio = "^1.3.0"
 pytest-cov = "^7.0.0"
 httpx = "^0.28.1"
 ruff = "^0.14.10"
-black = "^25.12.0"
+black = "^26.3.1"
 isort = "^7.0.0"
 mypy = "^1.19.1"
 build = "^1.3.0"

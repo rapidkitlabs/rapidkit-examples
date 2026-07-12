@@ -11,8 +11,8 @@ services:
     image: saas-webhooks:latest
     env_file:
       - .env
-    ports: ["8000:8000"]
-    command: "poetry run uvicorn src.main:app --host 0.0.0.0 --port 8000"
+    ports: ["8003:8003"]
+    command: "poetry run uvicorn src.main:app --host 0.0.0.0 --port 8003"
     volumes:
       - .:/app
     restart: unless-stopped
@@ -33,5 +33,4 @@ services:
 volumes:
   postgres-data:
     driver: local
-
 

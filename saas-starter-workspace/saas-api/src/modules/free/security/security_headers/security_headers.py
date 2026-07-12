@@ -19,7 +19,7 @@ from starlette.types import ASGIApp
 _RUNTIME: Any | None = None
 
 _VENDOR_MODULE = "security_headers"
-_VENDOR_VERSION = "0.1.3"
+_VENDOR_VERSION = "0.1.7"
 _VENDOR_RELATIVE_PATH = "src/modules/free/security/security_headers/security_headers.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_security_headers"

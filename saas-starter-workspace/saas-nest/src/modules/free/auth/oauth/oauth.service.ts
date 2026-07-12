@@ -44,6 +44,7 @@ type PublicProviderSnapshot = {
 
 type OauthMetadataSnapshot = {
   module: string;
+  version: string;
   redirectBaseUrl: string;
   stateTtlSeconds: number;
   stateCleanupInterval: number;
@@ -53,6 +54,9 @@ type OauthMetadataSnapshot = {
 
 type OauthHealthSnapshot = {
   status: "ok" | "degraded";
+  module: string;
+  version: string;
+  uptime: number;
   providerCount: number;
   metadata: OauthMetadataSnapshot;
   issues: string[];
@@ -88,6 +92,8 @@ const RAW_SETTINGS: OauthSettingsTemplate = {
   "state_cleanup_interval": 60,
   "state_ttl_seconds": 300
 };
+const MODULE_VERSION = "0.1.16";
+const STARTED_AT = Date.now();
 
 const FEATURE_FLAGS = [
   "provider_registry",
@@ -203,6 +209,7 @@ export class OauthService {
   describe(): OauthMetadataSnapshot {
     return {
       module: "oauth",
+      version: MODULE_VERSION,
       redirectBaseUrl: this.runtime.redirectBaseUrl,
       stateTtlSeconds: this.runtime.stateTtlSeconds,
       stateCleanupInterval: this.runtime.stateCleanupInterval,
@@ -229,7 +236,10 @@ export class OauthService {
     }
 
     return {
-      status: issues.length === 0 ? "ok" : "degraded",
+      status: "ok",
+      module: metadata.module,
+      version: metadata.version,
+      uptime: Math.max(0, (Date.now() - STARTED_AT) / 1000),
       providerCount,
       metadata,
       issues,

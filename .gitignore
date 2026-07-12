@@ -1,4 +1,16 @@
-# Ignore RapidKit generated cache/vendor snapshots across all example projects
+# RapidKit reconstructs generated module/runtime state from the committed
+# project registry and locked dependencies after clone. Keep generated state
+# out of the public examples repository.
 **/.rapidkit/snapshots/
-**/.rapidkit/vendor/
+**/.rapidkit/audit/
 **/.rapidkit/reports/
+**/.rapidkit/tmp/
+**/.rapidkit/vendor/
+
+# Workspai runtime evidence is machine-local. Publish portable workspace
+# foundations and contracts, but regenerate summaries/reports after cloning.
+**/.workspai/reports/
+**/.workspai/workspace-registry.v1.json
+**/.workspai/imported-projects.json
+**/.workspai/adopt.json
+**/.workspai/adopt-readiness.json

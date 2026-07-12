@@ -1,6 +1,7 @@
 # Quickstart Workspace
 
-RapidKit workspace demonstrating production-ready API development in 5 minutes.
+A Workspai-managed RapidKit Core example with two production-style FastAPI
+services.
 
 **Related Articles:**
 - Medium: [From Zero to Production FastAPI with RapidKit: Build a Real E-Commerce API](https://medium.com/@rapidkit/from-zero-to-production-fastapi-with-rapidkit-build-a-real-e-commerce-api-80390a34ffe3)
@@ -8,8 +9,38 @@ RapidKit workspace demonstrating production-ready API development in 5 minutes.
 - Source repository: https://github.com/rapidkitlabs/rapidkit-examples/tree/main/quickstart-workspace
 
 **Projects in this workspace:**
-- [product-api](product-api/README.md) - Production-ready FastAPI with auth, database, caching, and monitoring
+- [product-api](product-api/README.md) - Production-pattern FastAPI with auth, database, caching, and monitoring
 - [ecommerce-api](ecommerce-api/README.md) - Production-style e-commerce backend with catalog/cart/checkout flow
+
+---
+
+## Start after clone or download
+
+Run these commands from `quickstart-workspace`, the directory containing
+`.workspai-workspace`:
+
+```bash
+npx workspai workspace sync
+npx workspai workspace contract inspect
+npx workspai workspace contract verify --strict --json
+npx workspai workspace model --json --write
+npx workspai doctor workspace --json
+```
+
+The first sync registers this workspace on the current machine and discovers
+both existing projects. Do not import or adopt the workspace itself; its
+portable markers already identify it. To add another project, use `import` when
+it should be copied into this workspace or `adopt` when it must remain in place:
+
+```bash
+npx workspai import ../existing-api --workspace . --json
+npx workspai adopt ../external-api --workspace . --dry-run --json
+npx workspai adopt ../external-api --workspace . --json
+npx workspai workspace sync
+```
+
+Complete baseline, diff, impact, verify, agent context, agent-sync, explain, and
+CI workflow: [Workspace onboarding](../WORKSPACE_ONBOARDING.md).
 
 ---
 
@@ -21,10 +52,8 @@ RapidKit workspace demonstrating production-ready API development in 5 minutes.
 # Clone the examples repository
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/quickstart-workspace
-
-# Or create from scratch
-npx rapidkit quickstart-workspace
-cd quickstart-workspace
+npx workspai workspace sync
+npx workspai workspace contract verify --strict --json
 ```
 
 ### 2. Start Infrastructure
@@ -44,17 +73,16 @@ docker-compose up -d postgres redis
 ```bash
 cd ecommerce-api
 cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev
+npx workspai init
+npx workspai dev -p 8001
 ```
 
-**API running at:** http://localhost:8000
+**API running at:** http://localhost:8001
 
 **Endpoints:**
-- API Docs: http://localhost:8000/docs
-- Health Check: http://localhost:8000/health
-- Metrics: http://localhost:8000/metrics
+- API Docs: http://localhost:8001/docs
+- Health Check: http://localhost:8001/health
+- Metrics: http://localhost:8001/metrics
 
 ---
 
@@ -62,7 +90,7 @@ rapidkit dev
 
 ### product-api
 
-Production-ready FastAPI with:
+Production-pattern FastAPI with:
 - ✅ JWT Authentication (register, login, refresh)
 - ✅ PostgreSQL with SQLAlchemy (async & sync)
 - ✅ Redis caching with connection pooling
@@ -136,24 +164,22 @@ quickstart-workspace/
 
 ```bash
 cd product-api
-source .rapidkit/activate
 
 # Add email module
-rapidkit add module email
+npx workspai add module email
 
 # Add monitoring
-rapidkit add module observability.core
+npx workspai add module observability.core
 
 # Add rate limiting
-rapidkit add module rate_limit
+npx workspai add module rate_limit
 ```
 
 ### Run Tests
 
 ```bash
 cd product-api
-source .rapidkit/activate
-rapidkit test
+npx workspai test
 
 # With coverage
 pytest --cov=src tests/
@@ -191,7 +217,7 @@ docker-compose up -d
 Validate the workspace setup:
 
 ```bash
-npx rapidkit doctor workspace
+npx workspai doctor workspace
 ```
 
 **Checks:**
@@ -277,17 +303,18 @@ curl http://localhost:8000/metrics
 - **4:30** - Write tests
 - **5:00** - Deploy configuration
 
-**Result:** Production-ready API in 5 minutes! ⏱️
+**Result:** A runnable production-pattern API for learning and extension. Apply
+the documented hardening and verification gates before a real deployment.
 
 ---
 
 ## 📚 Resources
 
-- 📦 **npm CLI:** https://www.npmjs.com/package/rapidkit
+- 📦 **npm CLI:** https://www.npmjs.com/package/workspai
 - 🐍 **Python Core:** https://pypi.org/project/rapidkit-core/
-- 🧩 **VS Code Extension:** https://marketplace.visualstudio.com/rapidkit
+- 🧩 **VS Code Extension:** https://marketplace.visualstudio.com/items?itemName=rapidkit.rapidkit-vscode
 - 🌐 **Website:** https://www.getrapidkit.com
-- 📖 **Documentation:** https://docs.getrapidkit.com
+- 📖 **Documentation:** https://www.workspai.dev/docs
 
 ---
 
@@ -306,11 +333,11 @@ curl http://localhost:8000/metrics
 ### Port Already in Use
 
 ```bash
-# RapidKit auto-switches to free port
-rapidkit dev
+# Workspai can select a free port when the default is unavailable
+npx workspai dev
 
 # Or specify port manually
-rapidkit dev -p 8001
+npx workspai dev -p 8001
 ```
 
 ### Database Connection Issues
@@ -337,23 +364,20 @@ docker-compose exec redis redis-cli ping
 
 ```bash
 # Validate setup
-rapidkit doctor
+npx workspai doctor
 
 # Reinstall dependencies
 cd product-api
-source .rapidkit/activate
 poetry install
 ```
 
 ---
 
-**Built with RapidKit** 🚀
-
-*"From zero to production API in 5 minutes. No templates. No boilerplate. Just features."*
+**Built with Workspai and RapidKit Core.**
 
 If you encounter issues:
 
 1. Ensure Python 3.10+ is installed: `python3 --version`
-2. Check RapidKit installation: `rapidkit --version`
-3. Run diagnostics: `rapidkit doctor`
+2. Check RapidKit installation: `npx workspai --version`
+3. Run diagnostics: `npx workspai doctor`
 4. Visit RapidKit documentation or GitHub issues

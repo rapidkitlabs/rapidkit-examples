@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { RedisModule } from "../../../../../../src/modules/free/cache/redis/redis.module";
+import { RedisModule } from "@modules/free/cache/redis/redis.module";
 
 describe("Redis NestJS E2E", () => {
   it("compiles the module", async () => {

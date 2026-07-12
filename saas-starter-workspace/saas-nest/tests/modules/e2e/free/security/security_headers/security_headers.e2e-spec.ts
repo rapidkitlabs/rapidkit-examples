@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 
-import { SecurityHeadersModule } from "../../../../../../src/modules/free/security/security_headers/security-headers/security-headers.module";
+import { SecurityHeadersModule } from "@modules/free/security/security_headers/security-headers/security-headers.module";
 
 describe("SecurityHeaders NestJS E2E", () => {
   it("compiles the module", async () => {

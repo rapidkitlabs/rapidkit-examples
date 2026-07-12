@@ -13,7 +13,6 @@ _FALLBACK_IMPORTS: Tuple[Tuple[str, str], ...] = (
     ("src.health.settings", "register_settings_health"),
     ("src.health.ai_assistant", "register_ai_assistant_health"),
     ("src.health.redis", "register_redis_health"),
-    ("src.health.security_headers", "register_security_headers_health"),
     ("_", "-"),
 )
 

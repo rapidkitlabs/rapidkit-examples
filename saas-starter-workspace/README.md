@@ -1,6 +1,7 @@
 # SaaS Starter Workspace
 
-Production-ready multi-service SaaS architecture with FastAPI, NestJS, and advanced webhook processing.
+A Workspai-managed multi-service SaaS example with FastAPI, NestJS, and
+webhook processing.
 
 **Related Articles:**
 - Medium: [Building Production SaaS Architecture: Deep Dive into Multi-Service Implementation](https://rapidkit.medium.com/building-production-saas-architecture-deep-dive-into-multi-service-implementation-8a838f36e4ad)
@@ -15,6 +16,38 @@ Production-ready multi-service SaaS architecture with FastAPI, NestJS, and advan
 
 ---
 
+## Start after clone or download
+
+Run these commands from `saas-starter-workspace`, the directory containing
+`.workspai-workspace`:
+
+```bash
+npx workspai workspace sync
+npx workspai workspace contract inspect
+npx workspai workspace contract verify --strict --json
+npx workspai workspace model --json --write
+npx workspai doctor workspace --json
+```
+
+The first sync registers this workspace on the current machine and discovers
+all four services. Do not import or adopt the workspace itself; its portable
+markers already identify it.
+
+To add another service, use import to copy it into this workspace or adopt to
+leave it at its existing path:
+
+```bash
+npx workspai import ../existing-service --workspace . --json
+npx workspai adopt ../external-service --workspace . --dry-run --json
+npx workspai adopt ../external-service --workspace . --json
+npx workspai workspace sync
+```
+
+Complete baseline, diff, impact, verify, agent context, agent-sync, explain, and
+CI workflow: [Workspace onboarding](../WORKSPACE_ONBOARDING.md).
+
+---
+
 ## ⚡ Quick Start
 
 ### 1. Clone & Setup Workspace
@@ -23,20 +56,18 @@ Production-ready multi-service SaaS architecture with FastAPI, NestJS, and advan
 # Clone the examples repository
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
 cd rapidkit-examples/saas-starter-workspace
-
-# Or create from scratch
-npx rapidkit saas-starter-workspace
-cd saas-starter-workspace
+npx workspai workspace sync
+npx workspai workspace contract verify --strict --json
 ```
 
 ### 2. Validate Workspace Health
 
 ```bash
 # Check all 4 projects are detected
-rapidkit doctor workspace
+npx workspai doctor workspace
 ```
 
-**Expected output:**
+**Illustrative output shape:**
 ```
 ✓ Workspace: saas-starter-workspace
 ✓ Projects: 4/4 detected
@@ -44,8 +75,12 @@ rapidkit doctor workspace
   - saas-admin (FastAPI, 4 modules)
   - saas-nest (NestJS, 5 modules)
   - saas-webhooks (FastAPI, 3 modules)
-✓ Health: 100%
+✓ Contract: passed
 ```
+
+Exact health findings depend on the current machine, installed runtimes, and
+freshness of generated evidence. Treat the structured doctor verdict as the
+authority.
 
 ### 3. Launch All Services
 
@@ -53,36 +88,32 @@ rapidkit doctor workspace
 ```bash
 cd saas-api
 cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev
+npx workspai init
+npx workspai dev
 ```
 
 **Terminal 2 — Admin API (port 8001):**
 ```bash
 cd saas-admin
 cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev --port 8001
+npx workspai init
+npx workspai dev --port 8001
 ```
 
 **Terminal 3 — NestJS Service (port 8002):**
 ```bash
 cd saas-nest
 cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev --port 8002
+npx workspai init
+npx workspai dev --port 8002
 ```
 
 **Terminal 4 — Webhook Processor (port 8003):**
 ```bash
 cd saas-webhooks
 cp .env.example .env
-source .rapidkit/activate
-rapidkit init
-rapidkit dev --port 8003
+npx workspai init
+npx workspai dev --port 8003
 ```
 
 **Services running at:**
@@ -280,26 +311,26 @@ curl -X POST http://127.0.0.1:8003/api/webhooks/replay/evt_test_123
 ```bash
 # Test individual services
 cd saas-api
-rapidkit test
+npx workspai test
 cd ..
 
 cd saas-admin
-rapidkit test
+npx workspai test
 cd ..
 
 cd saas-nest
-rapidkit test
+npx workspai test
 cd ..
 
 cd saas-webhooks
-rapidkit test
+npx workspai test
 cd ..
 
 # Or test all services
 for svc in saas-api saas-admin saas-nest saas-webhooks; do
   echo "Testing $svc..."
   cd "$svc"
-  rapidkit test
+  npx workspai test
   cd ..
 done
 ```
@@ -308,16 +339,15 @@ done
 
 ```bash
 cd saas-api
-source .rapidkit/activate
 
 # Add database
-rapidkit add module db_postgres
+npx workspai add module db_postgres
 
 # Add Redis caching
-rapidkit add module redis
+npx workspai add module redis
 
 # Add email notifications
-rapidkit add module email
+npx workspai add module email
 ```
 
 ---
@@ -404,9 +434,9 @@ docker-compose up -d redis
 - Service separation patterns
 
 **RapidKit documentation:**
-- [CLI Reference](https://getrapidkit.com/docs/cli)
-- [Modules Catalog](https://getrapidkit.com/docs/modules)
-- [Deployment Guide](https://getrapidkit.com/docs/deployment)
+- [CLI Reference](https://www.workspai.dev/docs/cli)
+- [Modules Catalog](https://www.workspai.dev/docs/cli/modules)
+- [Deployment Guide](https://www.workspai.dev/docs/guides)
 
 ---
 
@@ -415,13 +445,13 @@ docker-compose up -d redis
 **"Module not found" errors:**
 ```bash
 cd <project>
-rapidkit init
+npx workspai init
 ```
 
 **Services won't start:**
 ```bash
 # Check health
-rapidkit doctor workspace
+npx workspai doctor workspace
 
 # Verify ports are available
 lsof -i :8000-8003

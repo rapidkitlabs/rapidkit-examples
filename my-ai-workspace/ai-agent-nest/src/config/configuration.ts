@@ -8,7 +8,7 @@ import { registerAs } from '@nestjs/config';
 // src/.rapidkit and makes generated projects robust and portable.
 const VENDOR_ROOT_ENV = 'RAPIDKIT_VENDOR_ROOT';
 const VENDOR_MODULE = 'settings';
-const VENDOR_VERSION = '0.1.32';
+const VENDOR_VERSION = '0.1.45';
 const VENDOR_CONFIGURATION_RELATIVE = 'src/config/configuration';
 
 function resolveVendorRoot(): string {
@@ -69,7 +69,7 @@ const defaultSettings = () => ({
   ENV: process.env.NODE_ENV ?? 'development',
   DEBUG: process.env.DEBUG === '1' || process.env.DEBUG?.toLowerCase() === 'true',
   PROJECT_NAME: process.env.APP_NAME ?? 'Ai Agent Nest',
-  SECRET_KEY: process.env.SECRET_KEY ?? 'GLMctE26PJ6ANjZapTZhcKTfYrT04awwDeFnrkX9sh7usHU5',
+  SECRET_KEY: process.env.SECRET_KEY ?? 'development-only-change-me',
   VERSION: process.env.APP_VERSION ?? '0.0.1',
   ALLOWED_HOSTS: (process.env.ALLOWED_HOSTS ?? '*').split(',').map((s) => s.trim()).filter(Boolean),
   CONFIG_FILES: [],

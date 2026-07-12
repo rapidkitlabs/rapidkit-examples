@@ -17,7 +17,7 @@ from typing import Any
 from fastapi import APIRouter, FastAPI
 
 _VENDOR_MODULE = "stripe_payment"
-_VENDOR_VERSION = "0.1.2"
+_VENDOR_VERSION = "0.1.6"
 _VENDOR_RELATIVE_PATH = "src/modules/free/billing/stripe_payment/stripe_payment.py"
 _VENDOR_ROOT_ENV = "RAPIDKIT_VENDOR_ROOT"
 _CACHE_PREFIX = "rapidkit_vendor_stripe_payment"

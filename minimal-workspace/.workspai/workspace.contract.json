@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "kind": "rapidkit.workspace.contract",
+  "generatedAt": "2026-07-12T17:03:42.811Z",
+  "workspace": {
+    "name": "minimal-workspace",
+    "profile": "minimal"
+  },
+  "projects": []
+}
