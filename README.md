@@ -39,7 +39,12 @@ Cursor, and other consumers instead of competing with them.
 
 ```bash
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
-cd rapidkit-examples/quickstart-workspace
+cd rapidkit-examples
+npm run hydrate:core -- \
+  --workspace quickstart-workspace \
+  --project product-api \
+  --project ecommerce-api
+cd quickstart-workspace
 
 npx workspai workspace sync
 npx workspai workspace contract verify --strict --json
@@ -49,6 +54,9 @@ npx workspai workspace model --json --write
 `workspace sync` is idempotent. On a newly cloned machine it registers the
 workspace locally, discovers its projects, and refreshes the portable workspace
 contract.
+
+`hydrate:core` installs the workspace-pinned Python engine and restores ignored
+module runtime payloads from each project's committed `registry.json`.
 
 ### Choose a learning path
 

@@ -27,10 +27,18 @@ runtime dependencies in a lockfile and its installed Core modules in
 Install the workspace environment before running Core-backed project commands:
 
 ```bash
-cd <workspace-directory>
-poetry install --no-interaction
-poetry run rapidkit --version
+# From the rapidkit-examples repository root. Repeat --project for every
+# Python project you want to run in this workspace.
+npm run hydrate:core -- \
+  --workspace <workspace-directory> \
+  --project <python-project-directory>
 ```
+
+This installs the workspace-pinned RapidKit Core engine and reconstructs the
+ignored `.rapidkit/vendor` runtime payloads from each project's committed
+`registry.json`. Hydration is required once after a fresh clone and whenever
+the generated module state is removed. The payloads remain local and must not
+be committed.
 
 Each Core-backed project also owns its runtime lockfile. Install and test it
 from the project directory:
@@ -50,7 +58,7 @@ example requires all of the following to agree:
 
 - the installed version in the project `registry.json`
 - the version selected by any source wrapper
-- the matching `.rapidkit/vendor/<module>/<version>` snapshot
+- the locally hydrated `.rapidkit/vendor/<module>/<version>` payload
 - an applied snippet registry with no `pending` or `failed` entries
 
 When upgrading Core, update modules through the RapidKit Core command line,

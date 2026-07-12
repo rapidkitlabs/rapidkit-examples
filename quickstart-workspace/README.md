@@ -51,7 +51,12 @@ CI workflow: [Workspace onboarding](../WORKSPACE_ONBOARDING.md).
 ```bash
 # Clone the examples repository
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
-cd rapidkit-examples/quickstart-workspace
+cd rapidkit-examples
+npm run hydrate:core -- \
+  --workspace quickstart-workspace \
+  --project product-api \
+  --project ecommerce-api
+cd quickstart-workspace
 npx workspai workspace sync
 npx workspai workspace contract verify --strict --json
 ```

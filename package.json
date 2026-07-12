@@ -4,7 +4,8 @@
   "private": true,
   "description": "Contract-backed example workspaces for Workspai and RapidKit Core",
   "scripts": {
-    "check": "git ls-files -z | node scripts/validate-examples.mjs --tracked-stdin"
+    "check": "git ls-files -z | node scripts/validate-examples.mjs --tracked-stdin",
+    "hydrate:core": "node scripts/hydrate-core-modules.mjs"
   },
   "engines": {
     "node": ">=20.19.6"

@@ -23,6 +23,21 @@ jobs:
           python-version: '3.10'
       - run: python -m pip install poetry==2.4.1
       - run: npm run check
+      - name: Restore RapidKit Core module payloads
+        shell: bash
+        run: |
+          npm run hydrate:core -- \
+            --workspace quickstart-workspace \
+            --project product-api \
+            --project ecommerce-api
+          npm run hydrate:core -- \
+            --workspace my-ai-workspace \
+            --project ai-agent
+          npm run hydrate:core -- \
+            --workspace saas-starter-workspace \
+            --project saas-api \
+            --project saas-admin \
+            --project saas-webhooks
       - name: Verify Python projects
         shell: bash
         env:

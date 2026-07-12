@@ -29,6 +29,8 @@ function requireFile(relativePath) {
 const index = readJson('examples.json');
 requireFile('PUBLICATION_CONTRACT.md');
 requireFile('WORKSPACE_ONBOARDING.md');
+requireFile('scripts/hydrate-core-modules.mjs');
+requireFile('.github/workflows/examples-integrity.yml');
 if (index.schemaVersion !== 'workspai.examples-index.v1') {
   failures.push(`Unexpected examples schema: ${index.schemaVersion}`);
 }
@@ -126,7 +128,7 @@ const workspaceOnboardingRequirements = [
   ['WORKSPACE_ONBOARDING.md', 'complete workspace onboarding guide'],
 ];
 
-function validateWorkspaceReadme(workspaceRoot) {
+function validateWorkspaceReadme(workspaceRoot, { requireHydration = false } = {}) {
   const readmePath = `${workspaceRoot}/README.md`;
   requireFile(readmePath);
   const absolutePath = path.join(root, readmePath);
@@ -138,11 +140,14 @@ function validateWorkspaceReadme(workspaceRoot) {
       failures.push(`Workspace README lacks ${label}: ${readmePath}`);
     }
   }
+  if (requireHydration && !content.includes('npm run hydrate:core')) {
+    failures.push(`Workspace README lacks RapidKit Core module hydration: ${readmePath}`);
+  }
 }
 
 for (const workspace of published) {
   const workspaceRoot = workspace.path;
-  validateWorkspaceReadme(workspaceRoot);
+  validateWorkspaceReadme(workspaceRoot, { requireHydration: true });
   const rootPyprojectPath = `${workspaceRoot}/pyproject.toml`;
   const rootLockPath = `${workspaceRoot}/poetry.lock`;
   requireFile(rootPyprojectPath);
@@ -430,6 +435,7 @@ if (fs.existsSync(onboardingPath)) {
     failures.push('Workspace onboarding guide lacks audience-based navigation.');
   }
   const requiredOnboardingCommands = [
+    'npm run hydrate:core',
     'npx workspai workspace foundation ensure',
     'npx workspai import ../existing-project --workspace . --json',
     'npx workspai adopt ../existing-project --workspace . --dry-run --json',
@@ -488,6 +494,11 @@ for (const showcase of index.proShowcases) {
 }
 
 const requiredIgnoreRules = [
+  '**/.rapidkit/vendor/',
+  '**/.rapidkit/snapshots/',
+  '**/.rapidkit/audit/',
+  '**/.rapidkit/reports/',
+  '**/.rapidkit/tmp/',
   '**/.workspai/reports/',
   '**/.workspai/workspace-registry.v1.json',
   '**/.workspai/imported-projects.json',
@@ -498,6 +509,16 @@ const gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8');
 for (const rule of requiredIgnoreRules) {
   if (!gitignore.split(/\r?\n/).includes(rule)) {
     failures.push(`Missing machine-local artifact ignore rule: ${rule}`);
+  }
+}
+
+const workflowPath = path.join(root, '.github/workflows/examples-integrity.yml');
+if (fs.existsSync(workflowPath)) {
+  const workflow = fs.readFileSync(workflowPath, 'utf8');
+  for (const requirement of ['Restore RapidKit Core module payloads', 'npm run hydrate:core']) {
+    if (!workflow.includes(requirement)) {
+      failures.push(`Examples CI lacks required hydration step: ${requirement}`);
+    }
   }
 }
 

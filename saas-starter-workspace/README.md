@@ -18,10 +18,16 @@ webhook processing.
 
 ## Start after clone or download
 
-Run these commands from `saas-starter-workspace`, the directory containing
-`.workspai-workspace`:
+First restore the three Python projects' generated Core module payloads from
+the repository root, then enter `saas-starter-workspace`:
 
 ```bash
+npm run hydrate:core -- \
+  --workspace saas-starter-workspace \
+  --project saas-api \
+  --project saas-admin \
+  --project saas-webhooks
+cd saas-starter-workspace
 npx workspai workspace sync
 npx workspai workspace contract inspect
 npx workspai workspace contract verify --strict --json
@@ -55,7 +61,13 @@ CI workflow: [Workspace onboarding](../WORKSPACE_ONBOARDING.md).
 ```bash
 # Clone the examples repository
 git clone https://github.com/rapidkitlabs/rapidkit-examples.git
-cd rapidkit-examples/saas-starter-workspace
+cd rapidkit-examples
+npm run hydrate:core -- \
+  --workspace saas-starter-workspace \
+  --project saas-api \
+  --project saas-admin \
+  --project saas-webhooks
+cd saas-starter-workspace
 npx workspai workspace sync
 npx workspai workspace contract verify --strict --json
 ```

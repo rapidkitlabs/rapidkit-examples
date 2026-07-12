@@ -11,10 +11,14 @@ implementations.
 
 ## Start after clone or download
 
-Run these commands from `my-ai-workspace`, the directory containing
-`.workspai-workspace`:
+First restore the FastAPI project's generated Core module payloads from the
+repository root, then enter `my-ai-workspace`:
 
 ```bash
+npm run hydrate:core -- \
+  --workspace my-ai-workspace \
+  --project ai-agent
+cd my-ai-workspace
 npx workspai workspace sync
 npx workspai workspace contract inspect
 npx workspai workspace contract verify --strict --json
