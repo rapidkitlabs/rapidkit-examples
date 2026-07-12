@@ -116,9 +116,9 @@ def _utcnow_iso() -> str:
     return datetime.now(tz=timezone.utc).isoformat()
 
 
-def _get_session_runtime() -> SessionRuntime:
+async def _get_session_runtime() -> SessionRuntime:
     try:
-        return get_session_runtime()
+        return await get_session_runtime()
     except RuntimeError as exc:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -202,7 +202,7 @@ async def register(
     except UserEmailConflictError as exc:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=str(exc)) from exc
 
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     access_token = auth_runtime.issue_token(
         str(user.id),
         scopes=["user:read", "user:write", "billing:read", "team:write"],
@@ -240,7 +240,7 @@ async def login(
     if not password_hash or not auth_runtime.verify_password(payload.password, password_hash):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
 
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     access_token = auth_runtime.issue_token(
         str(user.id),
         scopes=["user:read", "user:write", "billing:read", "team:write"],
@@ -316,7 +316,7 @@ async def oauth_callback(
             )
         )
 
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     access_token = auth_runtime.issue_token(
         str(user.id),
         scopes=["user:read", "user:write", "billing:read", "team:write"],
@@ -344,7 +344,7 @@ async def auth_me(
     users_service: UsersService = Depends(get_users_service),
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
 ) -> dict[str, Any]:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
     return {"user": user.model_dump(mode="json")}
 
@@ -356,7 +356,7 @@ async def get_current_user_profile(
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
     profile_facade: UserProfileServiceFacade = Depends(get_user_profile_service_facade),
 ) -> UserProfileReadDTO:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
     try:
         return await profile_facade.get_profile(user.id)
@@ -372,7 +372,7 @@ async def upsert_current_user_profile(
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
     profile_facade: UserProfileServiceFacade = Depends(get_user_profile_service_facade),
 ) -> UserProfileReadDTO:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
     try:
         return await profile_facade.upsert_profile(user.id, payload)
@@ -393,7 +393,7 @@ async def create_subscription_checkout(
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
     _: Any = Depends(rate_limit_dependency(rule="default", cost=1)),
 ) -> dict[str, Any]:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
 
     selected_plan = next((plan for plan in _STORE.plans if plan["id"] == payload.plan_id), None)
@@ -416,7 +416,7 @@ async def get_current_subscription(
     users_service: UsersService = Depends(get_users_service),
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
 ) -> dict[str, Any]:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
     current = _STORE.subscriptions_by_user.get(user.id)
     if current is None:
@@ -432,7 +432,7 @@ async def add_payment_method(
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
     _: Any = Depends(rate_limit_dependency(rule="default", cost=1)),
 ) -> dict[str, Any]:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
     methods = _STORE.payment_methods_by_user.setdefault(user.id, [])
     method = {
@@ -454,7 +454,7 @@ async def list_teams(
     users_service: UsersService = Depends(get_users_service),
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
 ) -> dict[str, Any]:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
     return {"teams": _STORE.teams_by_user.get(user.id, [])}
 
@@ -467,7 +467,7 @@ async def create_team(
     auth_runtime: AuthCoreRuntime = Depends(get_auth_core_runtime),
     _: Any = Depends(rate_limit_dependency(rule="default", cost=1)),
 ) -> dict[str, Any]:
-    session_runtime = _get_session_runtime()
+    session_runtime = await _get_session_runtime()
     user = await _get_current_user(request, users_service, auth_runtime, session_runtime)
 
     bucket = _STORE.teams_by_user.setdefault(user.id, [])
